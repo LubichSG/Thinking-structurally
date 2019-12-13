@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Team_Project;
 
 namespace NoteApplicationGUI
 {
@@ -17,6 +18,7 @@ namespace NoteApplicationGUI
     /// </summary>
     public partial class AuthorizeWindow : Window
     {
+        UserManager userManager = new UserManager();
         public AuthorizeWindow()
         {
             InitializeComponent();
@@ -24,7 +26,20 @@ namespace NoteApplicationGUI
 
         private void AuthorizeButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if(String.IsNullOrEmpty(LoginTextBox.Text) || String.IsNullOrEmpty(PasswordTextBox.Password))
+            {
+                MessageBox.Show("All blanks should be filled!");
+            }
+            else if(userManager.CheckUserExists(LoginTextBox.Text, PasswordTextBox.Password))
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Invalid login or password");
+            }
         }
 
         private void UnauthorizeButton_Click(object sender, RoutedEventArgs e)
