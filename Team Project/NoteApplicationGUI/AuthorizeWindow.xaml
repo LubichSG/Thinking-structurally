@@ -1,0 +1,58 @@
+﻿<Window x:Class="NoteApplicationGUI.AuthorizeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NoteApplicationGUI"
+        mc:Ignorable="d"
+        Title="AuthorizeWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2"
+                   VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 20 20 0"
+                   FontSize="20" FontFamily="Comic Sans MS">
+            To log in, enter your login (phone number) and password
+        </TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0"
+                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"
+                   FontSize="18" FontFamily="Comic Sans MS">
+            Login
+        </TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0"
+                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"
+                   FontSize="18" FontFamily="Comic Sans MS">
+            Password
+        </TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="1" Height="40" Width="200"
+                 VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 0 0"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="LoginTextBox">
+        </TextBox>
+        <PasswordBox Grid.Row="2" Grid.Column="1" Height="40" Width="200"
+                     VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 0 0"
+                     FontSize="18" FontFamily="Comic Sans MS"
+                     Name="PasswordTextBox">
+        </PasswordBox>
+        <Button Name ="AuthorizeButton" Click="AuthorizeButton_Click"
+                Grid.Row="3" Grid.Column="1" Height="40" Width="120"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                FontSize="20" FontFamily="Comic Sans MS">
+            Continue
+        </Button>
+        <Button Name ="UnauthorizeButton" Click="UnauthorizeButton_Click"
+                Grid.Row="3" Grid.Column="0" Height="40" Width="120"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                FontSize="20" FontFamily="Comic Sans MS">
+            Back
+        </Button>
+    </Grid>
+</Window>
