@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json;
+using System.Xml;
 
 namespace Team_Project
 {
@@ -10,6 +13,11 @@ namespace Team_Project
     {
         private List<User> users;
         private List<Note> userNotes;
+
+        public UserManager()
+        {
+            LoadData();
+        }
         private string PasswordHash(string password)
         {
             MD5 md5 = MD5.Create();
@@ -20,6 +28,46 @@ namespace Team_Project
         public bool CheckUserExists(string login, string password)
         {
             return users.Any(u => u.Login == login && u.Password == PasswordHash(password));
+        }
+
+        private const string UsersFileName = "data/users.json";
+
+        private T Deserialize<T>(string fileName)
+        {
+            using (var sr = new StreamReader(fileName))
+            {
+                using (var jsonReader = new JsonTextReader(sr))
+                {
+                    var serializer = new JsonSerializer();
+                    return serializer.Deserialize<T>(jsonReader);
+                }
+            }
+        }
+
+        private void Serialize<T>(string fileName, T data)
+        {
+            using (var sw = new StreamWriter(fileName))
+            {
+                using (var jsonWriter = new JsonTextWriter(sw))
+                {
+                    jsonWriter.Formatting = Formatting.Indented;
+                    var serializer = new JsonSerializer();
+                    serializer.Serialize(jsonWriter, data);
+                }
+            }
+        }
+
+        private void LoadData()
+        {
+            users = Deserialize<List<User>>(UsersFileName);
+        }
+
+        private void SaveUser(string name, string surname, string phone, string login, string password)
+        {
+            int id = users.Count > 0 ? users.Max(u => u.Id) + 1 : 1;
+            var user = new User(id, name, surname, phone, login, PasswordHash(password));
+            users.Add(user);
+            Serialize(UsersFileName, users);
         }
     }
 }

@@ -58,7 +58,6 @@ namespace NoteApplicationGUI
                 {
                     MessageBox.Show("Name and surname should contain letters only!");
                     return false;
-                    //return value will be needed in the logic
                 }
             }
 
