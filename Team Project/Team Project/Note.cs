@@ -6,5 +6,6 @@ namespace Team_Project
 {
     class Note
     {
+
     }
 }
