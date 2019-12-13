@@ -14,7 +14,7 @@ namespace Team_Project
         public string Password { get; set; }
 
         public List<Note> Notes { get; set; }
-        public User(int id, string name, string surname, string phone, string login, string password, List<Note> notes)
+        public User(int id, string name, string surname, string phone, string login, string password)
         {
             Id = id;
             Name = name;
@@ -22,7 +22,6 @@ namespace Team_Project
             Phone = phone;
             Login = login;
             Password = password;
-            Notes = notes;
         }
 
     }
