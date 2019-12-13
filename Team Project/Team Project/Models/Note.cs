@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Team_Project
 {
-    class Note
+    public class Note
     {
         public int ID { get; set; }
         public DateTime Date { get; set; }
