@@ -75,6 +75,12 @@ namespace NoteApplicationGUI
                 return false;
             }
 
+            if(userManager.CheckUserExists(phone, password))
+            {
+                MessageBox.Show("User with this login already exists!");
+                return false;
+            }
+
             return true;
         }
     }
