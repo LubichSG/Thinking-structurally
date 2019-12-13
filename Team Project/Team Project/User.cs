@@ -12,7 +12,9 @@ namespace Team_Project
         public string Phone { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
-        public User(int id, string name, string surname, string phone, string login, string password)
+
+        public List<Note> Notes { get; set; }
+        public User(int id, string name, string surname, string phone, string login, string password, List<Note> notes)
         {
             Id = id;
             Name = name;
@@ -20,6 +22,7 @@ namespace Team_Project
             Phone = phone;
             Login = login;
             Password = password;
+            Notes = notes;
         }
 
     }
