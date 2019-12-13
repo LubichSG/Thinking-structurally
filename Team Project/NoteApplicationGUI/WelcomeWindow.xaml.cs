@@ -24,17 +24,21 @@ namespace NoteApplicationGUI
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-
+            AuthorizeWindow authWindow = new AuthorizeWindow();
+            authWindow.Show();
+            this.Close();
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-
+            RegisterWindow regWindow = new RegisterWindow();
+            regWindow.Show();
+            this.Close();
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
     }
 }
