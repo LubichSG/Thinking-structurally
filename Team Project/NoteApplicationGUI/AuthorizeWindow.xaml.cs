@@ -29,7 +29,9 @@ namespace NoteApplicationGUI
 
         private void UnauthorizeButton_Click(object sender, RoutedEventArgs e)
         {
-
+            WelcomeWindow welcomeWindow = new WelcomeWindow();
+            welcomeWindow.Show();
+            this.Close();
         }
     }
 }
