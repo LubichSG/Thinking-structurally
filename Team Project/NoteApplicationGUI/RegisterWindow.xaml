@@ -24,63 +24,63 @@
             To sign up, fill in the gaps
         </TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0"
-                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 220 0"
+                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 230 0"
                    FontSize="18" FontFamily="Comic Sans MS">
             Name
         </TextBlock>
         <TextBlock Grid.Row="2" Grid.Column="0"
-                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 220 0"
+                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 230 0"
                    FontSize="18" FontFamily="Comic Sans MS">
             Surname
         </TextBlock>
         <TextBlock Grid.Row="3" Grid.Column="0"
-                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 220 0"
+                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 230 0"
                    FontSize="18" FontFamily="Comic Sans MS">
             Phone number
         </TextBlock>
         <TextBox Grid.Row="1" Grid.Column="0" Height="40" Width="200"
-                 VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0"
+                 VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="NameTextBox">
         </TextBox>
         <TextBox Grid.Row="2" Grid.Column="0" Height="40" Width="200"
-                 VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0"
+                 VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="SurnameTextBox">
         </TextBox>
         <TextBox Grid.Row="3" Grid.Column="0" Height="40" Width="200"
-                 VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0"
+                 VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="PhoneNumberTextBox">
         </TextBox>
         <TextBlock Grid.Row="1" Grid.Column="1"
-                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 220 0"
+                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 230 0"
                    FontSize="18" FontFamily="Comic Sans MS">
             Login
         </TextBlock>
         <TextBlock Grid.Row="2" Grid.Column="1"
-                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 220 0"
+                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 230 0"
                    FontSize="18" FontFamily="Comic Sans MS">
             Password
         </TextBlock>
         <TextBlock Grid.Row="3" Grid.Column="1"
-                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 220 0"
+                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 230 0"
                    FontSize="18" FontFamily="Comic Sans MS">
             Confirm password
         </TextBlock>
         <TextBox Grid.Row="1" Grid.Column="1" Height="40" Width="200"
-                 VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0"
+                 VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Text="{Binding ElementName=PhoneNumberTextBox, Path=Text}"
                  Name="LoginTextBox">
         </TextBox>
         <PasswordBox Grid.Row="2" Grid.Column="1" Height="40" Width="200"
-                     VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0"
+                     VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"
                      FontSize="18" FontFamily="Comic Sans MS"
                      Name="PasswordTextBox">
         </PasswordBox>
         <PasswordBox Grid.Row="3" Grid.Column="1" Height="40" Width="200"
-                     VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 10 0"
+                     VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"
                      FontSize="18" FontFamily="Comic Sans MS"
                      Name="PasswordConfirmTextBox">
         </PasswordBox>
