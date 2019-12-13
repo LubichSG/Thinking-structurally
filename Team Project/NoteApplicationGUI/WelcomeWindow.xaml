@@ -19,7 +19,7 @@
             Welcome to Smart Note Application!
         </TextBlock>
         <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1"
-                   Height="50" FontFamily="Comic Sans MS" FontSize="18" Margin="5">
+                   FontFamily="Comic Sans MS" FontSize="18" Margin="5">
             To continue, you have to login or register
         </TextBlock>
         <Button Name="LoginButton" Click="LoginButton_Click"
