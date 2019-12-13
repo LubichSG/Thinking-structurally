@@ -24,5 +24,20 @@ namespace NoteApplicationGUI
         {
             InitializeComponent();
         }
+
+        private void ViewNotesButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CreateNoteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
