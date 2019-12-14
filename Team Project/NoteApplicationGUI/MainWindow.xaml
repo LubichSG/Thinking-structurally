@@ -6,25 +6,29 @@
         xmlns:local="clr-namespace:NoteApplicationGUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/Pastel.jpg" Stretch="Fill"></ImageBrush>
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Button Name="ViewNotesButton" Click="ViewNotesButton_Click"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                Width="200" Height="50" FontFamily="Comic Sans MS" FontSize="20">
+                Width="200" Height="50" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="20">
             View notes
         </Button>
         <Button Name="CreateNoteButton" Click="CreateNoteButton_Click"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                Width="200" Height="50" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="20">
+                Width="200" Height="50" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="20">
             Create a new note
         </Button>
         <Button Name="ExitButton" Click="ExitButton_Click"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                Width="200" Height="50" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="20">
+                Width="200" Height="50" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="20">
             Exit
         </Button>
     </Grid>
