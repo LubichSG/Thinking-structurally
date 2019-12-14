@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:NoteApplicationGUI"
         mc:Ignorable="d"
         Title="WelcomeWindow" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/Pastel.jpg" Stretch="Fill"></ImageBrush>
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="70"/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -32,7 +35,7 @@
                 Width="200" Height="50" FontFamily="Comic Sans MS" FontSize="20">
             Sign Up
         </Button>
-        <Button Name="ExitButton"  Click="ExitButton_Click"
+        <Button Name="ExitButton"  Click="ExitButton_Click" 
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4"
                 Width="200" Height="50" FontFamily="Comic Sans MS" FontSize="20">
             Exit
