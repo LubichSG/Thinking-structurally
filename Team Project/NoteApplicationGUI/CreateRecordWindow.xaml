@@ -22,7 +22,7 @@
         <Button Name="ListStructuringButton" Click="ListStructuringButton_Click"
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1"
                 Width="342" Height="50" FontFamily="Comic Sans MS" FontSize="20">
-            Organizad to-do list structure
+            Organize to-do list structure
         </Button>
         <Button Name="HaphazardIdeasButton" Click="HaphazardIdeasButton_Click"
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2"
