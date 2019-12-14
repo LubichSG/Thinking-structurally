@@ -7,6 +7,86 @@
         mc:Ignorable="d"
         Title="ViewRecordsWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="3"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10"
+                   FontSize="20" FontFamily="Comic Sans MS">
+            My record
+        </TextBlock>
+        <TextBox Grid.Row="1" Height="63" Width="160"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox1"/>
+        <TextBox Grid.Row="2" Height="63" Width="160"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox2"/>
+        <TextBox Grid.Row="3" Height="63" Width="160"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox3"/>
+
+        <TextBox Grid.Row="1" Grid.Column="1" Height="63" Width="160"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox4"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Height="63" Width="160"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox5"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Height="63" Width="160"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox6"/>
+
+        <TextBox Grid.Row="1" Grid.Column="2" Height="63" Width="160"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox7"/>
+        <TextBox Grid.Row="2" Grid.Column="2" Height="63" Width="160"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox8"/>
+        <TextBox Grid.Row="3" Grid.Column="2" Height="63" Width="160"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox9"/>
+        <Button Name ="ToСhangeButton" 
+                Grid.Row="1" Grid.Column="3" Height="40" Width="120" 
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                FontSize="20" FontFamily="Comic Sans MS">
+            To change
+        </Button>
+
+        <Button Name ="RemoveButton" 
+                Grid.Row="2" Grid.Column="3" Height="40" Width="120" 
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                FontSize="20" FontFamily="Comic Sans MS">
+            Remove
+        </Button>
+
+
+
+        <Button Name ="BackButton" 
+                Grid.Row="4" Grid.Column="3" Height="40" Width="120" Click="UnregisterButton_Click"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                FontSize="20" FontFamily="Comic Sans MS">
+            Back
+        </Button>
+
     </Grid>
 </Window>

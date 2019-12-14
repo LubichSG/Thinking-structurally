@@ -13,6 +13,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -24,11 +25,16 @@
                    FontSize="20" FontFamily="Comic Sans MS">
             New record
         </TextBlock>
-        <TextBox Grid.Row="1" Grid.Column="0" Height="304" Width="722"
-                 VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40,0,0,0"
+        <TextBox Grid.Column="0" Height="290" Width="722"
+                 VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40,0,0,0"
                  FontSize="18" FontFamily="Comic Sans MS"
-                 Name="NameTextBox" Grid.ColumnSpan="2" Grid.RowSpan="4">
-        </TextBox>
+                 Name="NameTextBox" Grid.ColumnSpan="2" Grid.RowSpan="6"/>
+        <Button Name ="BackButton" 
+                Grid.Row="5" Grid.ColumnSpan="2" Height="40" Width="120" Click="UnregisterButton_Click"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                FontSize="20" FontFamily="Comic Sans MS">
+            Back
+        </Button>
 
     </Grid>
 </Window>

@@ -21,5 +21,10 @@ namespace NoteApplicationGUI
         {
             InitializeComponent();
         }
+
+        private void UnregisterButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
