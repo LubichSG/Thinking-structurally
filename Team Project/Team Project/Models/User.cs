@@ -13,7 +13,6 @@ namespace Team_Project
         public string Login { get; set; }
         public string Password { get; set; }
 
-        public List<Note> Notes { get; set; }
         public User(int id, string name, string surname, string phone, string login, string password)
         {
             Id = id;
