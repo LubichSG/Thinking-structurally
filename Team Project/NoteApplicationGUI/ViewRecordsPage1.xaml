@@ -9,7 +9,7 @@
       Title="ViewRecordsPage1">
 
     <Grid>
-        <StackPanel Height="100" 
+        <!--<StackPanel Height="100" 
                     VerticalAlignment="Top" Orientation="Horizontal">
             <Button Height="70" Width="60" Margin="75 0 0 0"
                     VerticalAlignment="Center" HorizontalAlignment="Center"
@@ -59,6 +59,6 @@
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox9"/>
-        </StackPanel>
+        </StackPanel>-->
     </Grid>
 </Page>

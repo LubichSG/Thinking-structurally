@@ -54,7 +54,7 @@ namespace Team_Project
         {
             int id = notes.Count > 0 ? notes.Max(n => n.Id) + 1 : 1;
             var user = users.FirstOrDefault(u => u.Id == userId);
-            var note = new Note(headline, id, date, content, user, userId);
+            var note = new Note(headline, id, date, user, userId);
             notes.Add(note);
             Serialize(NotesFileName, notes);
         }
