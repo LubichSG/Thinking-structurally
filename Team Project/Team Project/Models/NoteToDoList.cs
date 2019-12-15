@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Team_Project.Models
+namespace Team_Project
 {
     class NoteToDoList: Note
     {
-        public string Content { get; set; }
+        
+        public ContentToDo ContentToDo { get; set; }
+        public NoteToDoList(string headline, int id, DateTime date, int number, DateTime dataEvent, string task, bool finished,
+            User user, int userId) : base(headline, id, date, user, userId) 
+        {
+            ContentToDo = new ContentToDo(number, dataEvent, task, finished); 
+        }
 
-        public NoteToDoList(string headline, int id, DateTime date, string content, User user, int userId) : base(headline, id, date, user, userId) { }
     }
 }
