@@ -17,14 +17,25 @@ namespace NoteApplicationGUI
     /// </summary>
     public partial class ViewRecordsWindow : Window
     {
+        public event Action<Window> userClosedWindow;
         public ViewRecordsWindow()
         {
             InitializeComponent();
         }
 
-        private void UnregisterButton_Click(object sender, RoutedEventArgs e)
+        private void СhangeButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void RemoveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            userClosedWindow?.Invoke(this);
         }
     }
 }

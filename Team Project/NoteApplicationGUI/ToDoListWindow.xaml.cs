@@ -17,6 +17,7 @@ namespace NoteApplicationGUI
     /// </summary>
     public partial class ToDoListWindow : Window
     {
+        public event Action<Window> userClosedWindow;
         public ToDoListWindow()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace NoteApplicationGUI
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-
+            userClosedWindow?.Invoke(this);
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)

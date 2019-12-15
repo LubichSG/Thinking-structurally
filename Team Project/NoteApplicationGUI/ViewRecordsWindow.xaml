@@ -68,14 +68,14 @@
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox9"/>
-        <Button Name ="ToСhangeButton" 
+        <Button Name ="СhangeButton" Click="СhangeButton_Click"
                 Grid.Row="1" Grid.Column="3" Height="40" Width="120" 
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 FontSize="20" FontFamily="Comic Sans MS">
             Сhange
         </Button>
 
-        <Button Name ="RemoveButton" 
+        <Button Name ="RemoveButton" Click="RemoveButton_Click"
                 Grid.Row="2" Grid.Column="3" Height="40" Width="120" 
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 FontSize="20" FontFamily="Comic Sans MS">
@@ -85,7 +85,7 @@
 
 
         <Button Name ="BackButton" 
-                Grid.Row="4" Grid.Column="3" Height="40" Width="120" Click="UnregisterButton_Click"
+                Grid.Row="4" Grid.Column="3" Height="40" Width="120" Click="BackButton_Click"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 FontSize="20" FontFamily="Comic Sans MS">
             Back

@@ -17,6 +17,7 @@ namespace NoteApplicationGUI
     /// </summary>
     public partial class HaphazardIdeasWindow : Window
     {
+        public event Action<Window> userClosedWindow;
         public HaphazardIdeasWindow()
         {
             InitializeComponent();
@@ -24,17 +25,15 @@ namespace NoteApplicationGUI
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-
+            userClosedWindow?.Invoke(this);
         }
 
-      
-
-        private void SaveButton1_Click(object sender, RoutedEventArgs e)
+        private void NameTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
 
-        private void NameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

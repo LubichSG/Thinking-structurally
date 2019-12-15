@@ -27,17 +27,29 @@ namespace NoteApplicationGUI
 
         private void ViewNotesButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ViewRecordsWindow viewWindow = new ViewRecordsWindow();
+            viewWindow.userClosedWindow += SeeThisWindowAgain;
+            viewWindow.Show();
+            this.Hide();
         }
 
         private void CreateNoteButton_Click(object sender, RoutedEventArgs e)
         {
-
+            CreateRecordWindow createWindow = new CreateRecordWindow();
+            createWindow.userClosedWindow += SeeThisWindowAgain;
+            createWindow.Show();
+            this.Hide();
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
 
+        private void SeeThisWindowAgain(Window window)
+        {
+            this.Show();
+            window.Close();
         }
     }
 }
