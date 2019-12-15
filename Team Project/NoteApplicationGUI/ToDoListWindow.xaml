@@ -8,84 +8,80 @@
         Title="ToDoListWindow" Height="450" Width="800">
 
     <Grid>
-        <StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="300"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-            <TextBlock 
+        <TextBlock 
                    VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10"
                    FontSize="20" FontFamily="Comic Sans MS">
             New to-do list
-            </TextBlock>
-
-
-            <!--<TextBlock Name ="HeaderBlock" Margin="10"
-             FontSize="20" FontFamily="Comic Sans MS" > 
-             Header
-            </TextBlock>-->
-
-        </StackPanel>
+        </TextBlock>
 
         <DataGrid Name="ToDoListDataGrid" AutoGenerateColumns="False" IsReadOnly="False"
                       FontSize="18" FontFamily="Comic Sans MS" RowBackground="White"
-                      VerticalAlignment="Top" HorizontalAlignment="Left"
-                      HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" Margin="59,65,0,0">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="№">
-                    <DataGridTextColumn.HeaderStyle>
-                        <Style TargetType="DataGridColumnHeader">
-                            <Setter Property="Background" Value="White"/>
-                            <Setter Property="BorderBrush" Value="Black"/>
-                            <Setter Property="BorderThickness" Value="1"/>
-                            <Setter Property="Width" Value="40"/>
-                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                        </Style>
-                    </DataGridTextColumn.HeaderStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="Date">
-                    <DataGridTextColumn.HeaderStyle>
-                        <Style TargetType="DataGridColumnHeader">
-                            <Setter Property="Background" Value="White"/>
-                            <Setter Property="BorderBrush" Value="Black"/>
-                            <Setter Property="BorderThickness" Value="1"/>
-                            <Setter Property="Width" Value="100"/>
-                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                        </Style>
-                    </DataGridTextColumn.HeaderStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="Task">
-                    <DataGridTextColumn.HeaderStyle>
-                        <Style TargetType="DataGridColumnHeader">
-                            <Setter Property="Background" Value="White"/>
-                            <Setter Property="BorderBrush" Value="Black"/>
-                            <Setter Property="BorderThickness" Value="1"/>
-                            <Setter Property="Width" Value="200"/>
-                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                        </Style>
-                    </DataGridTextColumn.HeaderStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="Finished">
-                    <DataGridTextColumn.HeaderStyle>
-                        <Style TargetType="DataGridColumnHeader">
-                            <Setter Property="Background" Value="White"/>
-                            <Setter Property="BorderBrush" Value="Black"/>
-                            <Setter Property="BorderThickness" Value="1"/>
-                            <Setter Property="Width" Value="100"/>
-                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                        </Style>
-                    </DataGridTextColumn.HeaderStyle>
-                </DataGridTextColumn>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button Name ="SaveButton" Click="SaveButton_Click"
-                Height="40" Width="120" 
+                      VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" Margin="20"
+                      HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="№">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="BorderBrush" Value="Black"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                                <Setter Property="Width" Value="40"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Date">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="BorderBrush" Value="Black"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                                <Setter Property="Width" Value="100"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Task">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="BorderBrush" Value="Black"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                                <Setter Property="Width" Value="400"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="Finished">
+                        <DataGridTextColumn.HeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="White"/>
+                                <Setter Property="BorderBrush" Value="Black"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                                <Setter Property="Width" Value="100"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            </Style>
+                        </DataGridTextColumn.HeaderStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Name ="SaveButton" Click="SaveButton_Click"
+                Height="40" Width="120" Grid.Row="2"
+                VerticalAlignment="Top" HorizontalAlignment="Right"
+                FontSize="20" FontFamily="Comic Sans MS" Margin="0 0 100 0">
+                Save
+            </Button>
+            <Button Name ="BackButton" Click="BackButton_Click"
+                Height="40" Width="120"  Grid.Row="2"
                 VerticalAlignment="Top" HorizontalAlignment="Left"
-                FontSize="20" FontFamily="Comic Sans MS" Margin="544,384,0,0">
-            Save
-        </Button>
-        <Button Name ="BackButton" Click="BackButton_Click"
-                Height="40" Width="120" 
-                VerticalAlignment="Top" HorizontalAlignment="Left"
-                FontSize="20" FontFamily="Comic Sans MS" Margin="131,384,0,0">
-            Back
-        </Button>
+                FontSize="20" FontFamily="Comic Sans MS" Margin="100 0 0 0">
+                Back
+            </Button>
     </Grid>
 </Window>
