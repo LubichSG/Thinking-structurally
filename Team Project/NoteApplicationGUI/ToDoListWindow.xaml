@@ -17,17 +17,17 @@
             </TextBlock>
 
 
-            <TextBlock Name ="HeaderBlock" Margin="10"
+            <!--<TextBlock Name ="HeaderBlock" Margin="10"
              FontSize="20" FontFamily="Comic Sans MS" > 
              Header
-            </TextBlock>
+            </TextBlock>-->
 
         </StackPanel>
-        
+
         <DataGrid Name="ToDoListDataGrid" AutoGenerateColumns="False" IsReadOnly="False"
                       FontSize="18" FontFamily="Comic Sans MS" RowBackground="White"
-                      VerticalAlignment="Center" HorizontalAlignment="Center"
-                      HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black">
+                      VerticalAlignment="Top" HorizontalAlignment="Left"
+                      HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" Margin="59,65,0,0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="№">
                     <DataGridTextColumn.HeaderStyle>
