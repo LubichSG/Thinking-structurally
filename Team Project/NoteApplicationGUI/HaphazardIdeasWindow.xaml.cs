@@ -26,5 +26,12 @@ namespace NoteApplicationGUI
         {
 
         }
+
+      
+
+        private void SaveButton1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

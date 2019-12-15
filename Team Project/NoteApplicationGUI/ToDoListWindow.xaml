@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:NoteApplicationGUI"
         mc:Ignorable="d"
         Title="ToDoListWindow" Height="450" Width="800">
-    
+
     <Grid>
         <StackPanel>
-            
+
             <TextBlock 
                    VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10"
                    FontSize="20" FontFamily="Comic Sans MS">
@@ -33,7 +33,7 @@
                  VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40,0,0,0"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="NameTextBox" />
-                       
+
                         <!--<TextBlock Text="" />-->
 
 
@@ -45,10 +45,16 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <Button Name ="SaveButton" Click="BackButton_Click"
+                Height="40" Width="120" 
+                VerticalAlignment="Top" HorizontalAlignment="Left"
+                FontSize="20" FontFamily="Comic Sans MS" Margin="544,384,0,0">
+            Save
+        </Button>
         <Button Name ="BackButton" Click="BackButton_Click"
                 Height="40" Width="120" 
-                VerticalAlignment="Top" HorizontalAlignment="Center"
-                FontSize="20" FontFamily="Comic Sans MS" Margin="0,384,0,0">
+                VerticalAlignment="Top" HorizontalAlignment="Left"
+                FontSize="20" FontFamily="Comic Sans MS" Margin="131,384,0,0">
             Back
         </Button>
     </Grid>
