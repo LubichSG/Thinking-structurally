@@ -6,7 +6,50 @@
         xmlns:local="clr-namespace:NoteApplicationGUI"
         mc:Ignorable="d"
         Title="ToDoListWindow" Height="450" Width="800">
+    
     <Grid>
-        
+        <StackPanel>
+            
+            <TextBlock 
+                   VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10"
+                   FontSize="20" FontFamily="Comic Sans MS">
+            New to-do list
+            </TextBlock>
+
+
+            <TextBlock Name ="HeaderBlock" Margin="10"
+             FontSize="20" FontFamily="Comic Sans MS" > 
+             Header
+            </TextBlock>
+
+        </StackPanel>
+        <ListBox Name="SessionBox"  Margin="0,128,0,0" >
+
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="List:" FontWeight="DemiBold" />
+                        <TextBox  Height="290" Width="722"
+                 VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40,0,0,0"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="NameTextBox" />
+                       
+                        <!--<TextBlock Text="" />-->
+
+
+                    </StackPanel>
+
+
+
+
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Name ="BackButton" Click="BackButton_Click"
+                Height="40" Width="120" 
+                VerticalAlignment="Top" HorizontalAlignment="Center"
+                FontSize="20" FontFamily="Comic Sans MS" Margin="0,384,0,0">
+            Back
+        </Button>
     </Grid>
 </Window>

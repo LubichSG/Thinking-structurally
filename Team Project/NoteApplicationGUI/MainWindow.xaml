@@ -16,6 +16,11 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10"
+                   FontSize="20" FontFamily="Comic Sans MS">
+            Welcome! Thank you for choosing our app.
+        </TextBlock>
         <Button Name="ViewNotesButton" Click="ViewNotesButton_Click"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 Width="200" Height="50" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="20">
