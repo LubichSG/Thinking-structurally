@@ -22,7 +22,8 @@
                    FontSize="20" FontFamily="Comic Sans MS">
             New to-do list
         </TextBlock>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="68,48,0,286"
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="1" VerticalAlignment="Center"
+                   HorizontalAlignment="Left" Margin="68,48,0,286"
                    FontSize="20" FontFamily="Comic Sans MS" Grid.RowSpan="2" Width="92">
             Headline:
         </TextBlock>
@@ -33,7 +34,7 @@
         <DataGrid Name="ToDoListDataGrid" AutoGenerateColumns="False" IsReadOnly="False"
                       FontSize="18" FontFamily="Comic Sans MS" RowBackground="White"
                       VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" Margin="0,20,0,0"
-                      HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" Height="275">
+                      HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" Height="270">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="№">
