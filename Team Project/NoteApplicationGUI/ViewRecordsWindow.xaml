@@ -11,78 +11,85 @@
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="270"/>
             <RowDefinition/>
 
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Row="0" Grid.ColumnSpan="3"
                    VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10"
                    FontSize="20" FontFamily="Comic Sans MS">
-            My record
+            My notes
         </TextBlock>
-        <TextBox Grid.Row="1" Height="63" Width="160"
+
+        <StackPanel Grid.Row="1" Grid.Column="0" Height="90" 
+                    VerticalAlignment="Top" Orientation="Horizontal">
+            <TextBox Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox1"/>
-        <TextBox Grid.Row="2" Height="63" Width="160"
+            <TextBox Height="70" Width="150" Margin="50 30 50 30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox2"/>
-        <TextBox Grid.Row="3" Height="63" Width="160"
+            <TextBox Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox3"/>
+        </StackPanel>
 
-        <TextBox Grid.Row="1" Grid.Column="1" Height="63" Width="160"
+        <StackPanel Grid.Row="1" Grid.Column="0" Height="90" 
+                    VerticalAlignment="Center" Orientation="Horizontal">
+            <TextBox Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox4"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Height="63" Width="160"
+            <TextBox Height="70" Width="150" Margin="50 30 50 30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox5"/>
-        <TextBox Grid.Row="3" Grid.Column="1" Height="63" Width="160"
+            <TextBox Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox6"/>
+        </StackPanel>
 
-        <TextBox Grid.Row="1" Grid.Column="2" Height="63" Width="160"
+        <StackPanel Grid.Row="1" Grid.Column="0" Height="90" 
+                    VerticalAlignment="Bottom" Orientation="Horizontal">
+            <TextBox Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox7"/>
-        <TextBox Grid.Row="2" Grid.Column="2" Height="63" Width="160"
+            <TextBox Height="70" Width="150" Margin="50 30 50 30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox8"/>
-        <TextBox Grid.Row="3" Grid.Column="2" Height="63" Width="160"
+            <TextBox Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox9"/>
-        <Button Name ="СhangeButton" Click="СhangeButton_Click"
-                Grid.Row="1" Grid.Column="3" Height="40" Width="120" 
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
+            <Button Name ="СhangeButton" Click="СhangeButton_Click"
+                Height="40" Width="120" Margin="20"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 FontSize="20" FontFamily="Comic Sans MS">
-            Сhange
-        </Button>
+                Сhange
+            </Button>
 
-        <Button Name ="RemoveButton" Click="RemoveButton_Click"
-                Grid.Row="2" Grid.Column="3" Height="40" Width="120" 
+            <Button Name ="RemoveButton" Click="RemoveButton_Click"
+                Height="40" Width="120" Margin="20"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 FontSize="20" FontFamily="Comic Sans MS">
-            Remove
-        </Button>
-
-
+                Remove
+            </Button>
+        </StackPanel>
 
         <Button Name ="BackButton" 
                 Grid.Row="4" Grid.Column="3" Height="40" Width="120" Click="BackButton_Click"
@@ -90,6 +97,5 @@
                 FontSize="20" FontFamily="Comic Sans MS">
             Back
         </Button>
-
     </Grid>
 </Window>

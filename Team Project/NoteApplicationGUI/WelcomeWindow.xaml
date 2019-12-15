@@ -38,7 +38,7 @@
         <Button Name="ExitButton"  Click="ExitButton_Click" 
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4"
                 Width="200" Height="50" FontFamily="Comic Sans MS" FontSize="20">
-            Back
+            Exit
         </Button>
     </Grid>
 </Window>
