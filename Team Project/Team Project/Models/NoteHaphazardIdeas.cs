@@ -8,7 +8,10 @@ namespace Team_Project
     {
         public string Content { get; set; }
 
-        public NoteHaphazardIdeas(string headline, int id, DateTime date, string content, User user, int userId) : base(headline, id, date, user, userId) { }
+        public NoteHaphazardIdeas(string headline, int id, DateTime date, string content, User user, int userId) : base(headline, id, date, user, userId) 
+        {
+            Content = content;
+        }
         
         
     }

@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Team_Project;
 
 namespace NoteApplicationGUI
 {
@@ -17,10 +18,14 @@ namespace NoteApplicationGUI
     /// </summary>
     public partial class ViewRecordsWindow : Window
     {
+        UserManager userManager = new UserManager();
+        public User _user;
         public event Action<Window> userClosedWindow;
-        public ViewRecordsWindow()
+        public ViewRecordsWindow(string login)
         {
+            
             InitializeComponent();
+            _user = userManager.ReturnUser(login);
             ViewContent.Content = new ViewRecordsPage1();
         }
 
@@ -47,7 +52,7 @@ namespace NoteApplicationGUI
 
         private void HaphazardIdeaButton_Click(object sender, RoutedEventArgs e)
         {
-            HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow();
+            HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow(_user.Login);
             ideaWindow.userClosedWindow += SeeThisWindowAgain;
             ideaWindow.Show();
             HaphazardIdeaButton.Visibility = Visibility.Hidden;
@@ -57,7 +62,7 @@ namespace NoteApplicationGUI
 
         private void ToDoListButton_Click(object sender, RoutedEventArgs e)
         {
-            ToDoListWindow listWindow = new ToDoListWindow();
+            ToDoListWindow listWindow = new ToDoListWindow(_user.Login);
             listWindow.userClosedWindow += SeeThisWindowAgain;
             listWindow.Show();
             HaphazardIdeaButton.Visibility = Visibility.Hidden;

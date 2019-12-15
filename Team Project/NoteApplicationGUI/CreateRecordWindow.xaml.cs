@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Team_Project;
 
 namespace NoteApplicationGUI
 {
@@ -17,10 +18,16 @@ namespace NoteApplicationGUI
     /// </summary>
     public partial class CreateRecordWindow : Window
     {
+        UserManager userManager = new UserManager();
+        public User _user;
         public event Action<Window> userClosedWindow;
-        public CreateRecordWindow()
+        public CreateRecordWindow(string login)
+        
+
         {
             InitializeComponent();
+          _user = userManager.ReturnUser(login);
+
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -30,7 +37,7 @@ namespace NoteApplicationGUI
 
         private void ToDoListButton_Click(object sender, RoutedEventArgs e)
         {
-            ToDoListWindow listWindow = new ToDoListWindow();
+            ToDoListWindow listWindow = new ToDoListWindow(_user.Login);
             listWindow.userClosedWindow += SeeThisWindowAgain;
             listWindow.Show();
             this.Hide();
@@ -38,7 +45,7 @@ namespace NoteApplicationGUI
 
         private void HaphazardIdeaButton_Click(object sender, RoutedEventArgs e)
         {
-            HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow();
+            HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow(_user.Login);
             ideaWindow.userClosedWindow += SeeThisWindowAgain;
             ideaWindow.Show();
             this.Hide();

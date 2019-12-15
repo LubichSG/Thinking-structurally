@@ -24,6 +24,7 @@ namespace NoteApplicationGUI
         public RegisterWindow()
         {
             InitializeComponent();
+
         }
 
         private void UnregisterButton_Click(object sender, RoutedEventArgs e)
@@ -43,7 +44,8 @@ namespace NoteApplicationGUI
             }
             else if(CheckUserInput(NameTextBox.Text, SurnameTextBox.Text, PhoneNumberTextBox.Text, PasswordTextBox.Password, PasswordConfirmTextBox.Password))
             {
-                MainWindow mainWindow = new MainWindow();
+                userManager.SaveUser(NameTextBox.Text, SurnameTextBox.Text, PhoneNumberTextBox.Text, LoginTextBox.Text, PasswordTextBox.Password);
+                MainWindow mainWindow = new MainWindow(LoginTextBox.Text);
                 mainWindow.Show();
                 this.Close();
             }

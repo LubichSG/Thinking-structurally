@@ -31,7 +31,7 @@ namespace Team_Project
             return users.Any(u => u.Login == login && u.Password == PasswordHash(password));
         }
 
-        private const string UsersFileName = "data/users.json";
+        private const string UsersFileName = "../../../../data/users.json";
 
         private T Deserialize<T>(string fileName)
         {
@@ -63,12 +63,17 @@ namespace Team_Project
             users = Deserialize<List<User>>(UsersFileName);
         }
 
-        private void SaveUser(string name, string surname, string phone, string login, string password)
+        public void SaveUser(string name, string surname, string phone, string login, string password)
         {
             int id = users.Count > 0 ? users.Max(u => u.Id) + 1 : 1;
             var user = new User(id, name, surname, phone, login, PasswordHash(password));
             users.Add(user);
             Serialize(UsersFileName, users);
+        }
+
+        public User ReturnUser(string login)
+        {
+            return users.FirstOrDefault(u => u.getLogin() == login);
         }
     }
 }

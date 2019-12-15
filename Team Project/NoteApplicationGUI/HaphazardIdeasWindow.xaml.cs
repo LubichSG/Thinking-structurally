@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Team_Project;
 
 namespace NoteApplicationGUI
 {
@@ -17,10 +18,19 @@ namespace NoteApplicationGUI
     /// </summary>
     public partial class HaphazardIdeasWindow : Window
     {
+        UserManager userManager = new UserManager();
+        NoteManager noteManager = new NoteManager();
+        public User _user;
+        public int count;
+        public int id;
+      
         public event Action<Window> userClosedWindow;
-        public HaphazardIdeasWindow()
+
+        public HaphazardIdeasWindow(string login)
         {
             InitializeComponent();
+            _user = userManager.ReturnUser(login);
+            count = 0;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -28,16 +38,18 @@ namespace NoteApplicationGUI
             userClosedWindow?.Invoke(this);
         }
 
-        private void NameTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
+        
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         { if(RecordTextBox.Text != null)
             {
-                //data
-                //SaveNote(DateTime date, string content, int userId);
+                if (++count == 1)
+                {
+                    id = noteManager.SaveNoteHaphazardIdeas(0,HeadlineBox.Text, DateTime.Now, RecordTextBox.Text, _user.Id);
+                }
+                else
+                {
+                    noteManager.SaveNoteHaphazardIdeas(id, HeadlineBox.Text, DateTime.Now, RecordTextBox.Text, _user.Id);
+                }
             }
 
         }

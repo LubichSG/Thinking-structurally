@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Team_Project;
 
 namespace NoteApplicationGUI
 {
@@ -17,10 +18,13 @@ namespace NoteApplicationGUI
     /// </summary>
     public partial class ToDoListWindow : Window
     {
+        UserManager userManager = new UserManager();
+        public User _user;
         public event Action<Window> userClosedWindow;
-        public ToDoListWindow()
+        public ToDoListWindow(string login)
         {
             InitializeComponent();
+            _user = userManager.ReturnUser(login);
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -33,9 +37,6 @@ namespace NoteApplicationGUI
 
         }
 
-        private void ToDoListDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+        
     }
 }

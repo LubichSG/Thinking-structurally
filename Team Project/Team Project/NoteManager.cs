@@ -13,6 +13,7 @@ namespace Team_Project
         private List<NoteHaphazardIdeas> notesHaphazard;
         private List<NoteToDoList> notesToDo;
         private List<User> users;
+        public UserManager userManager = new UserManager();
         private class NotesData
         {
             public List<NoteHaphazardIdeas> NotesHaphazard { get; set; }
@@ -23,7 +24,8 @@ namespace Team_Project
             LoadData();
         }
 
-        private const string NotesFileName = "data/notes.json";
+        private const string NotesFileName = "../../../../data/notes.json";
+        private const string UsersFileName = "../../../../data/users.json";
 
         private T Deserialize<T>(string fileName)
         {
@@ -53,8 +55,9 @@ namespace Team_Project
         private void LoadData()
         {
             var data = Deserialize<NotesData>(NotesFileName);
-            notesHaphazard = data.NotesHaphazard ?? new List<NoteHaphazardIdeas>();
-            notesToDo = data.NotesToDo ?? new List<NoteToDoList>();
+            notesHaphazard = data?.NotesHaphazard ?? new List<NoteHaphazardIdeas>();
+            notesToDo = data?.NotesToDo ?? new List<NoteToDoList>();
+            users = Deserialize<List<User>>(UsersFileName);
         }
         private void SaveData()
         {
@@ -66,21 +69,48 @@ namespace Team_Project
             Serialize(NotesFileName, data);
         }
        
-        private void SaveNoteHaphazardIdeas(string headline, DateTime date, string content, int userId)
+        public int SaveNoteHaphazardIdeas(int id, string headline, DateTime date, string content, int userId)
         {
-            int id = notesHaphazard.Count > 0 ? notesHaphazard.Max(n => n.Id) + 1 : 1;
-            var user = users.FirstOrDefault(u => u.Id == userId);
-            var noteHaphazard = new NoteHaphazardIdeas(headline, id, date, content, user, userId);
-            notesHaphazard.Add(noteHaphazard);
+
+            if (id == 0)
+            {
+                id = notesToDo.Count > 0 ? notesToDo.Max(n => n.Id) + 1 : 1;
+                var user = users.FirstOrDefault(u => u.Id == userId);
+                var noteHaphazard = new NoteHaphazardIdeas(headline, id, date, content, user, userId);
+                notesHaphazard.Add(noteHaphazard);
+            }
+            else {
+                var note = notesHaphazard.FirstOrDefault(u => u.Id == id);
+                note.Content = content;
+                note.Headline = headline;
+                note.Date = date;
+            }
             SaveData();
+            return id;
         }
-        private void SaveNoteToDoList(string headline, DateTime date, int number, DateTime dataEvent, string task, bool finished, int userId)
+        // у savelist переделать на list
+        public int SaveNoteToDoList(int id, string headline, DateTime date, int number, DateTime dataEvent, string task, bool finished, int userId)
         {
-            int id = notesToDo.Count > 0 ? notesToDo.Max(n => n.Id) + 1 : 1;
-            var user = users.FirstOrDefault(u => u.Id == userId);
-            var noteToDo = new NoteToDoList(headline, id, date, number, dataEvent, task, finished, user, userId);
-            notesToDo.Add(noteToDo);
+            if (id == 0)
+            {
+                id = notesToDo.Count > 0 ? notesToDo.Max(n => n.Id) + 1 : 1;
+                var user = users.FirstOrDefault(u => u.Id == userId);
+                var noteToDo = new NoteToDoList(headline, id, date, number, dataEvent, task, finished, user, userId);
+                notesToDo.Add(noteToDo);
+            }
+            else
+            {
+                var note = notesToDo.FirstOrDefault(u => u.Id == id);
+                note.ContentToDo.DataEvent = dataEvent;
+                note.ContentToDo.Task = task;
+                note.ContentToDo.Finished = finished;
+                note.ContentToDo.Number = number;
+                note.Headline = headline;
+                note.Date = DateTime.Now;
+            }
+            
             SaveData();
+            return id;
         }
     }
 }

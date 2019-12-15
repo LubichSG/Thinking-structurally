@@ -1,0 +1,20 @@
+{
+  "NotesHaphazard": [
+    {
+      "Content": "O brave new world",
+      "Headline": "Hello World!",
+      "Id": 1,
+      "Date": "2019-12-15T22:43:23.2422335+03:00",
+      "User": {
+        "Id": 1,
+        "Name": "Elliot",
+        "Surname": "Alderson",
+        "Phone": "+79102338080",
+        "Login": "+79102338080",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 1
+    }
+  ],
+  "NotesToDo": []
+}
