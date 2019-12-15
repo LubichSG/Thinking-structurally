@@ -7,7 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Flowers.png" />
+    <None Remove="Resources\Pastel.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Team Project\Team Project.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Flowers.png" />
+    <Resource Include="Resources\Pastel.jpg" />
   </ItemGroup>
 
 </Project>
