@@ -12,6 +12,11 @@ namespace Team_Project
     {
         private List<Note> notes;
 
+        public NoteManager()
+        {
+            LoadData();
+        }
+
         private const string NotesFileName = "data/notes.json";
 
         private T Deserialize<T>(string fileName)
@@ -42,6 +47,14 @@ namespace Team_Project
         private void LoadData()
         {
             notes = Deserialize<List<Note>>(NotesFileName);
+        }
+
+        private void SaveNote(DateTime date, string content, int userId)
+        {
+            int id = notes.Count > 0 ? notes.Max(n => n.Id) + 1 : 1;
+            var note = new Note(id, date, content, userId);
+            notes.Add(note);
+            Serialize(NotesFileName, notes);
         }
     }
 }
