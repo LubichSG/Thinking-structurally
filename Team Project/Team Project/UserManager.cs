@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Text.Json;
 using System.Xml;
 using Newtonsoft.Json;
 
@@ -52,7 +51,7 @@ namespace Team_Project
             {
                 using (var jsonWriter = new JsonTextWriter(sw))
                 {
-                    jsonWriter.Formatting = Formatting.Indented;
+                    jsonWriter.Formatting = Newtonsoft.Json.Formatting.Indented;
                     var serializer = new JsonSerializer();
                     serializer.Serialize(jsonWriter, data);
                 }
