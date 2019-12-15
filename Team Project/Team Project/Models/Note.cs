@@ -16,6 +16,7 @@ namespace Team_Project
 
         public Note(string headline, int id, DateTime date, string content, User user, int userId)
         {
+            Headline = headline;
             Id = id;
             Date = date;
             //Content = content;
