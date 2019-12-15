@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:NoteApplicationGUI"
         mc:Ignorable="d"
         Title="AuthorizeWindow" Height="450" Width="800">
-    <Window.Background>
+    <!--<Window.Background>
         <ImageBrush ImageSource="Resources/Pastel.jpg" Stretch="Fill"></ImageBrush>
-    </Window.Background>
+    </Window.Background>-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>

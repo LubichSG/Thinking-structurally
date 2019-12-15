@@ -34,7 +34,11 @@ namespace NoteApplicationGUI
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
+        { if(RecordTextBox.Text != null)
+            {
+                data
+                SaveNote(DateTime date, string content, int userId);
+            }
 
         }
     }

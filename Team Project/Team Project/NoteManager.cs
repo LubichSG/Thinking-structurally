@@ -50,11 +50,11 @@ namespace Team_Project
             notes = Deserialize<List<Note>>(NotesFileName);
         }
 
-        private void SaveNote(DateTime date, string content, int userId)
+        private void SaveNote(string headline, DateTime date, string content, int userId)
         {
             int id = notes.Count > 0 ? notes.Max(n => n.Id) + 1 : 1;
             var user = users.FirstOrDefault(u => u.Id == userId);
-            var note = new Note(id, date, content, user, userId);
+            var note = new Note(headline, id, date, content, user, userId);
             notes.Add(note);
             Serialize(NotesFileName, notes);
         }
