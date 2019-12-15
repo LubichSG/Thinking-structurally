@@ -11,6 +11,7 @@ namespace Team_Project
     public class NoteManager
     {
         private List<Note> notes;
+        private List<User> users;
 
         public NoteManager()
         {
@@ -52,7 +53,8 @@ namespace Team_Project
         private void SaveNote(DateTime date, string content, int userId)
         {
             int id = notes.Count > 0 ? notes.Max(n => n.Id) + 1 : 1;
-            var note = new Note(id, date, content, userId);
+            var user = users.FirstOrDefault(u => u.Id == userId);
+            var note = new Note(id, date, content, user, userId);
             notes.Add(note);
             Serialize(NotesFileName, notes);
         }

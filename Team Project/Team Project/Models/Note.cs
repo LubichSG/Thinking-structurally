@@ -10,13 +10,15 @@ namespace Team_Project
         public DateTime Date { get; set; }
         public string Content { get; set; }
 
+        public User User { get; set; }
         public int UserId { get; set; }
 
-        public Note(int id, DateTime date, string content, int userId)
+        public Note(int id, DateTime date, string content, User user, int userId)
         {
             Id = id;
             Date = date;
             Content = content;
+            User = user;
             UserId = userId;
         }
     }
