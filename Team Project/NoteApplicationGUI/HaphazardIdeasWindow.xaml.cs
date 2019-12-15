@@ -33,5 +33,10 @@ namespace NoteApplicationGUI
         {
 
         }
+
+        private void NameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
