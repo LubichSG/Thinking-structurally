@@ -37,5 +37,37 @@ namespace NoteApplicationGUI
         {
             userClosedWindow?.Invoke(this);
         }
+
+        private void AddNote_Click(object sender, RoutedEventArgs e)
+        {
+            HaphazardIdeaButton.Visibility = Visibility.Visible;
+            ToDoListButton.Visibility = Visibility.Visible;
+        }
+
+        private void HaphazardIdeaButton_Click(object sender, RoutedEventArgs e)
+        {
+            HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow();
+            ideaWindow.userClosedWindow += SeeThisWindowAgain;
+            ideaWindow.Show();
+            HaphazardIdeaButton.Visibility = Visibility.Hidden;
+            ToDoListButton.Visibility = Visibility.Hidden;
+            this.Hide();
+        }
+
+        private void ToDoListButton_Click(object sender, RoutedEventArgs e)
+        {
+            ToDoListWindow listWindow = new ToDoListWindow();
+            listWindow.userClosedWindow += SeeThisWindowAgain;
+            listWindow.Show();
+            HaphazardIdeaButton.Visibility = Visibility.Hidden;
+            ToDoListButton.Visibility = Visibility.Hidden;
+            this.Hide();
+        }
+
+        private void SeeThisWindowAgain(Window window)
+        {
+            this.Show();
+            window.Close();
+        }
     }
 }

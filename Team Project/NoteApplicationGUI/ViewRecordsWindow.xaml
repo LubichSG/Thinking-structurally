@@ -30,9 +30,10 @@
         <StackPanel Grid.Row="1" Grid.Column="0" Height="90" 
                     VerticalAlignment="Top" Orientation="Horizontal">
             <Button Height="70" Width="60" Margin="75 0 0 0"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="40" FontFamily="Comic Sans MS"
-                 Name="AddNote" Background="Transparent" BorderBrush="Transparent">
+                    VerticalAlignment="Center" HorizontalAlignment="Center"
+                    FontSize="40" FontFamily="Comic Sans MS"
+                    Name="AddNote" Background="Transparent" BorderBrush="Transparent"
+                    Click="AddNote_Click">
                 <Image Source="Resources/AddButtonVersion2.png" Stretch="Uniform" Height="Auto"></Image>
 
             </Button>
@@ -95,10 +96,22 @@
         </StackPanel>
 
         <Button Name ="BackButton" 
-                Grid.Row="4" Grid.Column="3" Height="40" Width="120" Click="BackButton_Click"
+                Grid.Row="3" Grid.Column="1" Height="40" Width="120" Click="BackButton_Click"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 FontSize="20" FontFamily="Comic Sans MS">
             Back
+        </Button>
+        <Button Name ="HaphazardIdeaButton" Click="HaphazardIdeaButton_Click"
+                Grid.Row="3" Grid.Column="0" Height="40" Width="170"
+                VerticalAlignment="Center" HorizontalAlignment="Left" Margin="100 0 0 0"
+                FontSize="20" FontFamily="Comic Sans MS" Visibility="Hidden">
+            Haphazard idea
+        </Button>
+        <Button Name ="ToDoListButton" Click="ToDoListButton_Click"
+                Grid.Row="3" Grid.Column="0" Height="40" Width="170"
+                VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 100 0"
+                FontSize="20" FontFamily="Comic Sans MS" Visibility="Hidden">
+            To-do list
         </Button>
     </Grid>
 </Window>

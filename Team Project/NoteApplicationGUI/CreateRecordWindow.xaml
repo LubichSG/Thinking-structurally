@@ -25,7 +25,7 @@
         <Button Name="ToDoListButton" Click="ToDoListButton_Click"
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1"
                 Width="342" Height="50" FontFamily="Comic Sans MS" FontSize="20">
-            Organize to-do list structure
+            Organize a to-do list structure
         </Button>
         <Button Name="HaphazardIdeaButton" Click="HaphazardIdeaButton_Click"
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2"
