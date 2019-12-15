@@ -45,7 +45,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Name ="SaveButton" Click="BackButton_Click"
+        <Button Name ="SaveButton" Click="SaveButton_Click"
                 Height="40" Width="120" 
                 VerticalAlignment="Top" HorizontalAlignment="Left"
                 FontSize="20" FontFamily="Comic Sans MS" Margin="544,384,0,0">
