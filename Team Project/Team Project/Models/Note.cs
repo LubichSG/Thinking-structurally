@@ -9,7 +9,7 @@ namespace Team_Project
         public string Headline { get; set; }
         public int Id { get; set; }
         public DateTime Date { get; set; }
-        public string Content { get; set; }
+        //public string Content { get; set; }
 
         public User User { get; set; }
         public int UserId { get; set; }
@@ -18,7 +18,7 @@ namespace Team_Project
         {
             Id = id;
             Date = date;
-            Content = content;
+            //Content = content;
             User = user;
             UserId = userId;
         }
