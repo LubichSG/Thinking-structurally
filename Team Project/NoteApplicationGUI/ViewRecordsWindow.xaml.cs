@@ -21,6 +21,7 @@ namespace NoteApplicationGUI
         public ViewRecordsWindow()
         {
             InitializeComponent();
+            ViewContent.Content = new ViewRecordsPage1();
         }
 
         private void СhangeButton_Click(object sender, RoutedEventArgs e)

@@ -12,7 +12,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
-            <RowDefinition Height="270"/>
+            <RowDefinition Height="300"/>
             <RowDefinition/>
 
         </Grid.RowDefinitions>
@@ -27,57 +27,10 @@
             My notes
         </TextBlock>
 
-        <StackPanel Grid.Row="1" Grid.Column="0" Height="90" 
-                    VerticalAlignment="Top" Orientation="Horizontal">
-            <Button Height="70" Width="60" Margin="75 0 0 0"
-                    VerticalAlignment="Center" HorizontalAlignment="Center"
-                    FontSize="40" FontFamily="Comic Sans MS"
-                    Name="AddNote" Background="Transparent" BorderBrush="Transparent"
-                    Click="AddNote_Click">
-                <Image Source="Resources/AddButtonVersion2.png" Stretch="Uniform" Height="Auto"></Image>
-
-            </Button>
-            <TextBox Height="70" Width="150" Margin="125 30 50 30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox2"/>
-            <TextBox Height="70" Width="150" Margin="30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox3"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="0" Height="90" 
-                    VerticalAlignment="Center" Orientation="Horizontal">
-            <TextBox Height="70" Width="150" Margin="30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox4"/>
-            <TextBox Height="70" Width="150" Margin="50 30 50 30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox5"/>
-            <TextBox Height="70" Width="150" Margin="30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox6"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="0" Height="90" 
-                    VerticalAlignment="Bottom" Orientation="Horizontal">
-            <TextBox Height="70" Width="150" Margin="30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox7"/>
-            <TextBox Height="70" Width="150" Margin="50 30 50 30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox8"/>
-            <TextBox Height="70" Width="150" Margin="30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox9"/>
-        </StackPanel>
+        <Frame Grid.Row="1" Grid.Column="0"
+               x:Name="ViewContent">
+            
+        </Frame>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
             <Button Name ="СhangeButton" Click="СhangeButton_Click"

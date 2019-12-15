@@ -1,0 +1,64 @@
+﻿<Page x:Class="NoteApplicationGUI.ViewRecordsPage1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NoteApplicationGUI"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="650"
+      Title="ViewRecordsPage1">
+
+    <Grid>
+        <StackPanel Height="100" 
+                    VerticalAlignment="Top" Orientation="Horizontal">
+            <Button Height="70" Width="60" Margin="75 0 0 0"
+                    VerticalAlignment="Center" HorizontalAlignment="Center"
+                    FontSize="40" FontFamily="Comic Sans MS"
+                    Name="AddNote" Background="Transparent" BorderBrush="Transparent"
+                    Click="AddNote_Click">
+                <Image Source="Resources/AddButtonVersion1.png" Stretch="Uniform" Height="Auto"></Image>
+
+            </Button>
+            <TextBox Height="70" Width="150" Margin="125 30 50 30"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox2"/>
+            <TextBox Height="70" Width="150" Margin="30"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox3"/>
+        </StackPanel>
+
+        <StackPanel Height="100" 
+                    VerticalAlignment="Center" Orientation="Horizontal">
+            <TextBox Height="70" Width="150" Margin="30"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox4"/>
+            <TextBox Height="70" Width="150" Margin="50 30 50 30"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox5"/>
+            <TextBox Height="70" Width="150" Margin="30"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox6"/>
+        </StackPanel>
+
+        <StackPanel Height="100" 
+                    VerticalAlignment="Bottom" Orientation="Horizontal">
+            <TextBox Height="70" Width="150" Margin="30"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox7"/>
+            <TextBox Height="70" Width="150" Margin="50 30 50 30"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox8"/>
+            <TextBox Height="70" Width="150" Margin="30"
+                 VerticalAlignment="Center" HorizontalAlignment="Center"
+                 FontSize="18" FontFamily="Comic Sans MS"
+                 Name="TextBox9"/>
+        </StackPanel>
+    </Grid>
+</Page>
