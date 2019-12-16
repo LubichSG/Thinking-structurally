@@ -21,24 +21,24 @@
                    Margin="10" FontFamily="Comic Sans MS" FontSize="20">
             Create a new record!
         </TextBlock>
-       
-        <Button Name="ToDoListButton" Click="ToDoListButton_Click"
+
+        <Button Name="ToDoListButton" Click="ToDoListButton_Click" Background="SeaShell"
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1"
                 Width="342" Height="50" FontFamily="Comic Sans MS" FontSize="20">
             Organize a to-do list structure
         </Button>
-        <Button Name="HaphazardIdeaButton" Click="HaphazardIdeaButton_Click"
+        <Button Name="HaphazardIdeaButton" Click="HaphazardIdeaButton_Click" Background="SeaShell"
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2"
                 Width="342" Height="50" FontFamily="Comic Sans MS" FontSize="20">
             Haphazard ideas
         </Button>
-        <Button Name="ViewSampleTemplatesButton"  Click="ViewSampleTemplatesButton_Click"
+        <Button Name="ViewSampleTemplatesButton"  Click="ViewSampleTemplatesButton_Click" Background="SeaShell"
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3"
                 Width="342" Height="50" FontFamily="Comic Sans MS" FontSize="20">
             View sample templates
         </Button>
 
-        <Button Name="BackButton"  Click="BackButton_Click"
+        <Button Name="BackButton"  Click="BackButton_Click" Background="SeaShell"
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4"
                 Width="342" Height="50" FontFamily="Comic Sans MS" FontSize="20">
             Back

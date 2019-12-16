@@ -22,17 +22,17 @@
             Welcome! Thank you for choosing our app.
         </TextBlock>
         <Button Name="ViewNotesButton" Click="ViewNotesButton_Click"
-                VerticalAlignment="Center" HorizontalAlignment="Center"
+                VerticalAlignment="Center" HorizontalAlignment="Center" Background="SeaShell"
                 Width="200" Height="50" Grid.Row="1" FontFamily="Comic Sans MS" FontSize="20">
             View notes
         </Button>
         <Button Name="CreateNoteButton" Click="CreateNoteButton_Click"
-                VerticalAlignment="Center" HorizontalAlignment="Center"
+                VerticalAlignment="Center" HorizontalAlignment="Center" Background="SeaShell"
                 Width="200" Height="50" Grid.Row="2" FontFamily="Comic Sans MS" FontSize="20">
             Create a new note
         </Button>
         <Button Name="ExitButton" Click="ExitButton_Click"
-                VerticalAlignment="Center" HorizontalAlignment="Center"
+                VerticalAlignment="Center" HorizontalAlignment="Center" Background="SeaShell"
                 Width="200" Height="50" Grid.Row="3" FontFamily="Comic Sans MS" FontSize="20">
             Back
         </Button>

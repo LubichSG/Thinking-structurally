@@ -26,35 +26,35 @@
             To log in, enter your login (phone number) and password
         </TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0"
-                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"
-                   FontSize="18" FontFamily="Comic Sans MS">
+                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 30 0"
+                   FontSize="20" FontFamily="Comic Sans MS">
             Login
         </TextBlock>
         <TextBlock Grid.Row="2" Grid.Column="0"
-                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 20 0"
-                   FontSize="18" FontFamily="Comic Sans MS">
+                   VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 30 0"
+                   FontSize="20" FontFamily="Comic Sans MS">
             Password
         </TextBlock>
         <TextBox Grid.Row="1" Grid.Column="1" Height="40" Width="200"
-                 VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 0 0"
-                 FontSize="18" FontFamily="Comic Sans MS"
+                 VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30 0 0 0"
+                 FontSize="18" FontFamily="Comic Sans MS" Background="SeaShell"
                  Name="LoginTextBox">
         </TextBox>
         <PasswordBox Grid.Row="2" Grid.Column="1" Height="40" Width="200"
-                     VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 0 0"
-                     FontSize="18" FontFamily="Comic Sans MS"
+                     VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30 0 0 0"
+                     FontSize="18" FontFamily="Comic Sans MS" Background="SeaShell"
                      Name="PasswordTextBox">
         </PasswordBox>
         <Button Name ="AuthorizeButton" Click="AuthorizeButton_Click"
                 Grid.Row="3" Grid.Column="1" Height="40" Width="120"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                FontSize="20" FontFamily="Comic Sans MS">
+                FontSize="20" FontFamily="Comic Sans MS" Background="SeaShell">
             Continue
         </Button>
         <Button Name ="UnauthorizeButton" Click="UnauthorizeButton_Click"
                 Grid.Row="3" Grid.Column="0" Height="40" Width="120"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                FontSize="20" FontFamily="Comic Sans MS">
+                FontSize="20" FontFamily="Comic Sans MS" Background="SeaShell">
             Back
         </Button>
     </Grid>

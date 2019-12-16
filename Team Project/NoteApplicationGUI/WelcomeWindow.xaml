@@ -27,17 +27,17 @@
         </TextBlock>
         <Button Name="LoginButton" Click="LoginButton_Click"
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2"
-                Width="200" Height="50" FontFamily="Comic Sans MS" FontSize="20">
+                Width="200" Height="50" FontFamily="Comic Sans MS" FontSize="20" Background="SeaShell">
             Login
         </Button>
         <Button Name="RegisterButton" Click="RegisterButton_Click"
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3"
-                Width="200" Height="50" FontFamily="Comic Sans MS" FontSize="20">
+                Width="200" Height="50" FontFamily="Comic Sans MS" FontSize="20" Background="SeaShell">
             Sign Up
         </Button>
         <Button Name="ExitButton"  Click="ExitButton_Click" 
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4"
-                Width="200" Height="50" FontFamily="Comic Sans MS" FontSize="20">
+                Width="200" Height="50" FontFamily="Comic Sans MS" FontSize="20" Background="SeaShell">
             Exit
         </Button>
     </Grid>
