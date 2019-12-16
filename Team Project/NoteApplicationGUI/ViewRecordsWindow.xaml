@@ -29,22 +29,35 @@
 
         <Frame Grid.Row="1" Grid.Column="0"
                x:Name="ViewContent">
-            
+
         </Frame>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical">
             <Button Name ="СhangeButton" Click="СhangeButton_Click"
-                Height="40" Width="120" Margin="20"
+                Height="40" Width="120" Margin="10 20 10 10"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 FontSize="20" FontFamily="Comic Sans MS">
                 Сhange
             </Button>
 
             <Button Name ="RemoveButton" Click="RemoveButton_Click"
-                Height="40" Width="120" Margin="20"
+                Height="40" Width="120" Margin="10"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 FontSize="20" FontFamily="Comic Sans MS">
                 Remove
+            </Button>
+
+            <Button Name="Back" Click="Back_Click"
+                Height="40" Width="120" Margin="10 50 10 10"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                FontSize="20" FontFamily="Comic Sans MS">
+                Page 1
+            </Button>
+            <Button Name="Forward" Click="Forward_Click"
+                Height="40" Width="120" Margin="10 10 10 20"
+                VerticalAlignment="Center" HorizontalAlignment="Center"
+                FontSize="20" FontFamily="Comic Sans MS">
+                Page 2
             </Button>
         </StackPanel>
 

@@ -26,7 +26,6 @@ namespace NoteApplicationGUI
             
             InitializeComponent();
             _user = user;
-            ViewContent.Content = new ViewRecordsPage1();
         }
 
         private void СhangeButton_Click(object sender, RoutedEventArgs e)
@@ -42,12 +41,6 @@ namespace NoteApplicationGUI
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             userClosedWindow?.Invoke(this);
-        }
-
-        private void AddNote_Click(object sender, RoutedEventArgs e)
-        {
-            HaphazardIdeaButton.Visibility = Visibility.Visible;
-            ToDoListButton.Visibility = Visibility.Visible;
         }
 
         private void HaphazardIdeaButton_Click(object sender, RoutedEventArgs e)
@@ -70,10 +63,28 @@ namespace NoteApplicationGUI
             this.Hide();
         }
 
+        public void ShowButtonsToAddNote()
+        {
+            HaphazardIdeaButton.Visibility = Visibility.Visible;
+            ToDoListButton.Visibility = Visibility.Visible;
+        }
+
         private void SeeThisWindowAgain(Window window)
         {
             this.Show();
             window.Close();
+        }
+
+        private void Forward_Click(object sender, RoutedEventArgs e)
+        {
+            ViewRecordsPage2 page = new ViewRecordsPage2();
+            ViewContent.Content = page;
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            ViewRecordsPage1 page = new ViewRecordsPage1(this);
+            ViewContent.Content = page;
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Team_Project;
 
 namespace NoteApplicationGUI
 {
@@ -18,14 +19,18 @@ namespace NoteApplicationGUI
     /// </summary>
     public partial class ViewRecordsPage1 : Page
     {
-        public ViewRecordsPage1()
+
+        ViewRecordsWindow _window;
+        public ViewRecordsPage1(ViewRecordsWindow window)
         {
             InitializeComponent();
+            _window = window;
         }
 
         private void AddNote_Click(object sender, RoutedEventArgs e)
         {
-
+            _window.ShowButtonsToAddNote();
         }
+
     }
 }
