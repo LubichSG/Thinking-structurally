@@ -71,9 +71,14 @@ namespace Team_Project
             Serialize(UsersFileName, users);
         }
 
-        public User ReturnUser(string login)
+        public User FindUserByLogin(string login)
         {
-            return users.FirstOrDefault(u => u.getLogin() == login);
+            return users.FirstOrDefault(u => u.Login == login);
         }
+
+        //public string getLogin(User user)
+        //{
+        //    return user.Login;
+        //}
     }
 }

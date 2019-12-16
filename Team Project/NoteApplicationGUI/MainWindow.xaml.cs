@@ -36,10 +36,10 @@ namespace NoteApplicationGUI
         //    _parkingManager = new ParkingManager();
         //    _currentUser = _parkingManager.ReturnUser(login);
 
-            public MainWindow(string login)
+            public MainWindow(User user)
         {
             InitializeComponent();
-            _user = userManager.ReturnUser(login);
+            _user = user;
         }
 
         private void ViewNotesButton_Click(object sender, RoutedEventArgs e)
@@ -52,7 +52,7 @@ namespace NoteApplicationGUI
 
         private void CreateNoteButton_Click(object sender, RoutedEventArgs e)
         {
-            CreateRecordWindow createWindow = new CreateRecordWindow(_user.Login);
+            CreateRecordWindow createWindow = new CreateRecordWindow(_user);
             createWindow.userClosedWindow += SeeThisWindowAgain;
             createWindow.Show();
             this.Hide();

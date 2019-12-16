@@ -26,10 +26,10 @@ namespace NoteApplicationGUI
       
         public event Action<Window> userClosedWindow;
 
-        public HaphazardIdeasWindow(string login)
+        public HaphazardIdeasWindow(User user)
         {
             InitializeComponent();
-            _user = userManager.ReturnUser(login);
+            _user = user;
             count = 0;
         }
 
@@ -40,7 +40,7 @@ namespace NoteApplicationGUI
 
         
         private void SaveButton_Click(object sender, RoutedEventArgs e)
-        { if(RecordTextBox.Text != null)
+        { if(!String.IsNullOrEmpty(RecordTextBox.Text))
             {
                 if (++count == 1)
                 {

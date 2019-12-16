@@ -89,19 +89,19 @@ namespace Team_Project
             return id;
         }
         // у savelist переделать на list
-        public int SaveNoteToDoList(int id, string headline, DateTime date, int number, DateTime dataEvent, string task, bool finished, int userId)
+        public int SaveNoteToDoList(int id, string headline, DateTime date, int number, DateTime eventDate, string task, bool finished, int userId)
         {
             if (id == 0)
             {
                 id = notesToDo.Count > 0 ? notesToDo.Max(n => n.Id) + 1 : 1;
                 var user = users.FirstOrDefault(u => u.Id == userId);
-                var noteToDo = new NoteToDoList(headline, id, date, number, dataEvent, task, finished, user, userId);
+                var noteToDo = new NoteToDoList(headline, id, date, number, eventDate, task, finished, user, userId);
                 notesToDo.Add(noteToDo);
             }
             else
             {
                 var note = notesToDo.FirstOrDefault(u => u.Id == id);
-                note.ContentToDo.DataEvent = dataEvent;
+                note.ContentToDo.EventDate = eventDate;
                 note.ContentToDo.Task = task;
                 note.ContentToDo.Finished = finished;
                 note.ContentToDo.Number = number;

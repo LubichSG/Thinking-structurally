@@ -21,12 +21,11 @@ namespace NoteApplicationGUI
         UserManager userManager = new UserManager();
         public User _user;
         public event Action<Window> userClosedWindow;
-        public CreateRecordWindow(string login)
-        
 
+        public CreateRecordWindow(User user)
         {
             InitializeComponent();
-          _user = userManager.ReturnUser(login);
+          _user = user;
 
         }
 
@@ -37,7 +36,7 @@ namespace NoteApplicationGUI
 
         private void ToDoListButton_Click(object sender, RoutedEventArgs e)
         {
-            ToDoListWindow listWindow = new ToDoListWindow(_user.Login);
+            ToDoListWindow listWindow = new ToDoListWindow(_user);
             listWindow.userClosedWindow += SeeThisWindowAgain;
             listWindow.Show();
             this.Hide();
@@ -45,7 +44,7 @@ namespace NoteApplicationGUI
 
         private void HaphazardIdeaButton_Click(object sender, RoutedEventArgs e)
         {
-            HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow(_user.Login);
+            HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow(_user);
             ideaWindow.userClosedWindow += SeeThisWindowAgain;
             ideaWindow.Show();
             this.Hide();

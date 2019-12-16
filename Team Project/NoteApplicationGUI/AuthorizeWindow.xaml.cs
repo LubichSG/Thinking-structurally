@@ -32,7 +32,7 @@ namespace NoteApplicationGUI
             }
             else if(userManager.CheckUserExists(LoginTextBox.Text, PasswordTextBox.Password))
             {
-                MainWindow mainWindow = new MainWindow(LoginTextBox.Text);
+                MainWindow mainWindow = new MainWindow(userManager.FindUserByLogin(LoginTextBox.Text));
                 mainWindow.Show();
                 this.Close();
             }

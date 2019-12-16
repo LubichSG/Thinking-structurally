@@ -23,10 +23,10 @@ namespace Team_Project
             Password = password;
         }
 
-        public string getLogin()
-        {
-            return Login;
-        }
+        //public string getLogin()
+        //{
+        //    return Login;
+        //}
 
     }
 }

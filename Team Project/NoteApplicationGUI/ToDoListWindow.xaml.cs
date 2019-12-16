@@ -21,10 +21,10 @@ namespace NoteApplicationGUI
         UserManager userManager = new UserManager();
         public User _user;
         public event Action<Window> userClosedWindow;
-        public ToDoListWindow(string login)
+        public ToDoListWindow(User user)
         {
             InitializeComponent();
-            _user = userManager.ReturnUser(login);
+            _user = user;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
