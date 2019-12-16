@@ -45,7 +45,7 @@ namespace NoteApplicationGUI
             else if(CheckUserInput(NameTextBox.Text, SurnameTextBox.Text, PhoneNumberTextBox.Text, PasswordTextBox.Password, PasswordConfirmTextBox.Password))
             {
                 userManager.SaveUser(NameTextBox.Text, SurnameTextBox.Text, PhoneNumberTextBox.Text, LoginTextBox.Text, PasswordTextBox.Password);
-                MainWindow mainWindow = new MainWindow(LoginTextBox.Text);
+                MainWindow mainWindow = new MainWindow(userManager.FindUserByLogin(LoginTextBox.Text));
                 mainWindow.Show();
                 this.Close();
             }
