@@ -123,5 +123,13 @@ namespace Team_Project
         //                  select n;
         //    //return sortedNotes;
         //}
+
+        //public Note FindNoteByUserAndHeadline(User user, string headline)
+        //{
+        //    List<Note> notes = new List<Note>();
+        //    //    //notes.Add(notesHaphazard.Where(n => n.User == user).ToList());
+        //    //    //notes.Add(notesToDo.Where(n => n.User == user).ToList());
+        //    return notes.First(n => n.Headline == headline);
+        //}
     }
 }
