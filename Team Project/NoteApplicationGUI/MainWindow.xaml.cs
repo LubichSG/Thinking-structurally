@@ -44,7 +44,7 @@ namespace NoteApplicationGUI
 
         private void ViewNotesButton_Click(object sender, RoutedEventArgs e)
         {
-            ViewRecordsWindow viewWindow = new ViewRecordsWindow(_user.Login);
+            ViewRecordsWindow viewWindow = new ViewRecordsWindow(_user);
             viewWindow.userClosedWindow += SeeThisWindowAgain;
             viewWindow.Show();
             this.Hide();

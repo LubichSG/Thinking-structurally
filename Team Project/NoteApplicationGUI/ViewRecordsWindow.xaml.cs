@@ -21,11 +21,11 @@ namespace NoteApplicationGUI
         UserManager userManager = new UserManager();
         public User _user;
         public event Action<Window> userClosedWindow;
-        public ViewRecordsWindow(string login)
+        public ViewRecordsWindow(User user)
         {
             
             InitializeComponent();
-            _user = userManager.ReturnUser(login);
+            _user = user;
             ViewContent.Content = new ViewRecordsPage1();
         }
 
@@ -52,7 +52,7 @@ namespace NoteApplicationGUI
 
         private void HaphazardIdeaButton_Click(object sender, RoutedEventArgs e)
         {
-            HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow(_user.Login);
+            HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow(_user);
             ideaWindow.userClosedWindow += SeeThisWindowAgain;
             ideaWindow.Show();
             HaphazardIdeaButton.Visibility = Visibility.Hidden;
@@ -62,7 +62,7 @@ namespace NoteApplicationGUI
 
         private void ToDoListButton_Click(object sender, RoutedEventArgs e)
         {
-            ToDoListWindow listWindow = new ToDoListWindow(_user.Login);
+            ToDoListWindow listWindow = new ToDoListWindow(_user);
             listWindow.userClosedWindow += SeeThisWindowAgain;
             listWindow.Show();
             HaphazardIdeaButton.Visibility = Visibility.Hidden;
