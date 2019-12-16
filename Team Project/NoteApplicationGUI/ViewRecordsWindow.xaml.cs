@@ -22,11 +22,13 @@ namespace NoteApplicationGUI
         public User _user;
         public List<Note> _notes;
         public event Action<Window> userClosedWindow;
+        public Note noteToView;
         public ViewRecordsWindow(User user, List<Note> notes)
         {
             InitializeComponent();
             _user = user;
             _notes = notes;
+            noteToView = null;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -60,6 +62,12 @@ namespace NoteApplicationGUI
             ToDoListButton.Visibility = Visibility.Visible;
         }
 
+        public void ShowButtonToViewNote(Note note)
+        {
+            ViewNote.Visibility = Visibility.Visible;
+            noteToView = note;
+        }
+
         private void SeeThisWindowAgain(Window window)
         {
             this.Show();
@@ -78,8 +86,13 @@ namespace NoteApplicationGUI
         {
             HaphazardIdeaButton.Visibility = Visibility.Hidden;
             ToDoListButton.Visibility = Visibility.Hidden;
-            ViewRecordsPage1 page = new ViewRecordsPage1(this, _notes);
+            ViewRecordsPage1 page = new ViewRecordsPage1(this, _notes, _user);
             ViewContent.Content = page;
+        }
+
+        private void ViewNote_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

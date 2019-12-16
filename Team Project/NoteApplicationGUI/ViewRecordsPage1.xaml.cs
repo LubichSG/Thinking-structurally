@@ -19,14 +19,16 @@ namespace NoteApplicationGUI
     /// </summary>
     public partial class ViewRecordsPage1 : Page
     {
-
+        NoteManager noteManager = new NoteManager();
         ViewRecordsWindow _window;
-        public List<Note> _notes;
-        public ViewRecordsPage1(ViewRecordsWindow window, List<Note> notes)
+        private List<Note> _notes;
+        private User _user;
+        public ViewRecordsPage1(ViewRecordsWindow window, List<Note> notes, User user)
         {
             InitializeComponent();
             _window = window;
             _notes = notes;
+            _user = user;
             var buttons = new List<Button>() { this.Note1, this.Note2, this.Note3, this.Note4, this.Note5 };
             for(int i = 0; i < 5; i++)
             {
@@ -41,27 +43,27 @@ namespace NoteApplicationGUI
 
         private void Note1_Click(object sender, RoutedEventArgs e)
         {
-
+            _window.ShowButtonToViewNote(noteManager.FindNoteByUserAndHeadline(_user, Note1.Content));
         }
 
         private void Note2_Click(object sender, RoutedEventArgs e)
         {
-
+            _window.ShowButtonToViewNote(noteManager.FindNoteByUserAndHeadline(_user, Note2.Content));
         }
 
         private void Note3_Click(object sender, RoutedEventArgs e)
         {
-
+            _window.ShowButtonToViewNote(noteManager.FindNoteByUserAndHeadline(_user, Note3.Content));
         }
 
         private void Note4_Click(object sender, RoutedEventArgs e)
         {
-
+            _window.ShowButtonToViewNote(noteManager.FindNoteByUserAndHeadline(_user, Note4.Content));
         }
 
         private void Note5_Click(object sender, RoutedEventArgs e)
         {
-
+            _window.ShowButtonToViewNote(noteManager.FindNoteByUserAndHeadline(_user, Note5.Content));
         }
 
         private void NameButtons(Button button, Note note)
