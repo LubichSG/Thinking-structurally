@@ -112,5 +112,13 @@ namespace Team_Project
             SaveData();
             return id;
         }
+
+        //public List<Note> FindAllUserNotes(User user)
+        //{
+        //    //List<Note> notes = new List<Note>();
+        //    //notes.Add(notesHaphazard.Where(n => n.User == user).ToList());
+        //    //notes.Add(notesToDo.Where(n => n.User == user).ToList());
+        //    //return notes;
+        //}
     }
 }

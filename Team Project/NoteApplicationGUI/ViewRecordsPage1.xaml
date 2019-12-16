@@ -9,7 +9,7 @@
       Title="ViewRecordsPage1" ShowsNavigationUI="False">
 
     <Grid>
-        <StackPanel Height="100" 
+        <StackPanel Height="150" 
                     VerticalAlignment="Top" Orientation="Horizontal">
             <Button Height="70" Width="60" Margin="75 0 0 0"
                     VerticalAlignment="Center" HorizontalAlignment="Center"
@@ -19,46 +19,30 @@
                 <Image Source="Resources/AddButtonVersion1.png" Stretch="Uniform" Height="Auto"></Image>
 
             </Button>
-            <TextBox Height="70" Width="150" Margin="125 30 50 30"
+            <Button Height="70" Width="150" Margin="125 30 50 30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox2"/>
-            <TextBox Height="70" Width="150" Margin="30"
+            <Button Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox3"/>
         </StackPanel>
 
-        <StackPanel Height="100" 
-                    VerticalAlignment="Center" Orientation="Horizontal">
-            <TextBox Height="70" Width="150" Margin="30"
+        <StackPanel Height="150" 
+                    VerticalAlignment="Bottom" Orientation="Horizontal">
+            <Button Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox4"/>
-            <TextBox Height="70" Width="150" Margin="50 30 50 30"
+            <Button Height="70" Width="150" Margin="50 30 50 30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox5"/>
-            <TextBox Height="70" Width="150" Margin="30"
+            <Button Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox6"/>
-        </StackPanel>
-
-        <StackPanel Height="100" 
-                    VerticalAlignment="Bottom" Orientation="Horizontal">
-            <TextBox Height="70" Width="150" Margin="30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox7"/>
-            <TextBox Height="70" Width="150" Margin="50 30 50 30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox8"/>
-            <TextBox Height="70" Width="150" Margin="30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox9"/>
         </StackPanel>
     </Grid>
 </Page>

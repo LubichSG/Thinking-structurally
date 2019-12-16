@@ -9,7 +9,7 @@
       Title="ViewRecordsPage2" ShowsNavigationUI="False">
 
     <Grid>
-        <StackPanel Height="100" 
+        <StackPanel Height="150" 
                     VerticalAlignment="Top" Orientation="Horizontal">
             <TextBox Height="70" Width="150" Margin="30"
                     VerticalAlignment="Center" HorizontalAlignment="Center"
@@ -26,8 +26,8 @@
                  Name="TextBox3"/>
         </StackPanel>
 
-        <StackPanel Height="100" 
-                    VerticalAlignment="Center" Orientation="Horizontal">
+        <StackPanel Height="150" 
+                    VerticalAlignment="Bottom" Orientation="Horizontal">
             <TextBox Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
@@ -40,22 +40,6 @@
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
                  Name="TextBox6"/>
-        </StackPanel>
-
-        <StackPanel Height="100" 
-                    VerticalAlignment="Bottom" Orientation="Horizontal">
-            <TextBox Height="70" Width="150" Margin="30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox7"/>
-            <TextBox Height="70" Width="150" Margin="50 30 50 30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox8"/>
-            <TextBox Height="70" Width="150" Margin="30"
-                 VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox9"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -23,6 +23,7 @@ namespace NoteApplicationGUI
     public partial class MainWindow : Window
     {
         UserManager userManager = new UserManager();
+        NoteManager noteManager = new NoteManager();
 
 
         public User _user;
@@ -44,6 +45,7 @@ namespace NoteApplicationGUI
 
         private void ViewNotesButton_Click(object sender, RoutedEventArgs e)
         {
+            var userNotes = NoteManager.n
             ViewRecordsWindow viewWindow = new ViewRecordsWindow(_user);
             viewWindow.userClosedWindow += SeeThisWindowAgain;
             viewWindow.Show();
