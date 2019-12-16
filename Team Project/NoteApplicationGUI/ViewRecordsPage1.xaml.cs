@@ -21,10 +21,17 @@ namespace NoteApplicationGUI
     {
 
         ViewRecordsWindow _window;
-        public ViewRecordsPage1(ViewRecordsWindow window)
+        public List<Note> _notes;
+        public ViewRecordsPage1(ViewRecordsWindow window, List<Note> notes)
         {
             InitializeComponent();
             _window = window;
+            _notes = notes;
+            var buttons = new List<Button>() { this.Note1, this.Note2, this.Note3, this.Note4, this.Note5 };
+            for(int i = 0; i < 5; i++)
+            {
+                NameButtons(buttons[i], _notes[i]);
+            }
         }
 
         private void AddNote_Click(object sender, RoutedEventArgs e)
@@ -32,5 +39,34 @@ namespace NoteApplicationGUI
             _window.ShowButtonsToAddNote();
         }
 
+        private void Note1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Note2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Note3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Note4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Note5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NameButtons(Button button, Note note)
+        {
+            button.Content = note.Headline;
+        }
     }
 }

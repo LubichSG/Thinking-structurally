@@ -22,11 +22,11 @@
             <Button Height="70" Width="150" Margin="125 30 50 30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox2"/>
+                 Name="Note1" Click="Note1_Click"/>
             <Button Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox3"/>
+                 Name="Note2" Click="Note2_Click"/>
         </StackPanel>
 
         <StackPanel Height="150" 
@@ -34,15 +34,15 @@
             <Button Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox4"/>
+                 Name="Note3" Click="Note3_Click"/>
             <Button Height="70" Width="150" Margin="50 30 50 30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox5"/>
+                 Name="Note4" Click="Note4_Click"/>
             <Button Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
                  FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox6"/>
+                 Name="Note5" Click="Note5_Click"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -20,12 +20,13 @@ namespace NoteApplicationGUI
     {
         UserManager userManager = new UserManager();
         public User _user;
+        public List<Note> _notes;
         public event Action<Window> userClosedWindow;
-        public ViewRecordsWindow(User user)
+        public ViewRecordsWindow(User user, List<Note> notes)
         {
-            
             InitializeComponent();
             _user = user;
+            _notes = notes;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -77,7 +78,7 @@ namespace NoteApplicationGUI
         {
             HaphazardIdeaButton.Visibility = Visibility.Hidden;
             ToDoListButton.Visibility = Visibility.Hidden;
-            ViewRecordsPage1 page = new ViewRecordsPage1(this);
+            ViewRecordsPage1 page = new ViewRecordsPage1(this, _notes);
             ViewContent.Content = page;
         }
     }

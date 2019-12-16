@@ -118,7 +118,10 @@ namespace Team_Project
         //    //List<Note> notes = new List<Note>();
         //    //notes.Add(notesHaphazard.Where(n => n.User == user).ToList());
         //    //notes.Add(notesToDo.Where(n => n.User == user).ToList());
-        //    //return notes;
+        //var sortedNotes = from n in notes
+        //                  orderby n.Date descending
+        //                  select n;
+        //    //return sortedNotes;
         //}
     }
 }
