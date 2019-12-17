@@ -64,7 +64,7 @@ namespace NoteApplicationGUI
 
         public void ShowButtonToViewNote(Note note)
         {
-            //ViewNote.Visibility = Visibility.Visible;
+            ViewNote.Visibility = Visibility.Visible;
             noteToView = note;
         }
 
