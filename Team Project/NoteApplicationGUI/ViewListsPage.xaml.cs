@@ -15,15 +15,15 @@ using Team_Project;
 namespace NoteApplicationGUI
 {
     /// <summary>
-    /// Логика взаимодействия для ViewRecordsPage1.xaml
+    /// Логика взаимодействия для ViewRecordsPage2.xaml
     /// </summary>
-    public partial class ViewRecordsPage1 : Page
+    public partial class ViewListsPage : Page
     {
         NoteManager noteManager = new NoteManager();
         ViewRecordsWindow _window;
         private List<Note> _notes;
         private User _user;
-        public ViewRecordsPage1(ViewRecordsWindow window, List<Note> notes, User user)
+        public ViewListsPage(ViewRecordsWindow window, List<Note> notes, User user)
         {
             InitializeComponent();
             _window = window;
@@ -38,7 +38,7 @@ namespace NoteApplicationGUI
 
         private void AddNote_Click(object sender, RoutedEventArgs e)
         {
-            _window.AddHaphazardIdea();
+            _window.AddToDoList();
         }
 
         private void Note1_Click(object sender, RoutedEventArgs e)

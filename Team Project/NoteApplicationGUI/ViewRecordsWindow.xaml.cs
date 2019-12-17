@@ -83,17 +83,21 @@ namespace NoteApplicationGUI
 
         private void IdeasButton_Click(object sender, RoutedEventArgs e)
         {
+            IdeasButton.Background = Brushes.LightSeaGreen;
+            ListsButton.Background = Brushes.SeaShell;
             //HaphazardIdeaButton.Visibility = Visibility.Hidden;
             //ToDoListButton.Visibility = Visibility.Hidden;
-            ViewRecordsPage1 page = new ViewRecordsPage1(this, _notes, _user);
+            ViewIdeasPage page = new ViewIdeasPage(this, _notes, _user);
             ViewContent.Content = page;
         }
 
         private void ListsButton_Click(object sender, RoutedEventArgs e)
         {
+            ListsButton.Background = Brushes.LightSeaGreen;
+            IdeasButton.Background = Brushes.SeaShell;
             //HaphazardIdeaButton.Visibility = Visibility.Hidden;
             //ToDoListButton.Visibility = Visibility.Hidden;
-            ViewRecordsPage2 page = new ViewRecordsPage2(this, _notes, _user);
+            ViewListsPage page = new ViewListsPage(this, _notes, _user);
             ViewContent.Content = page;
         }
 
