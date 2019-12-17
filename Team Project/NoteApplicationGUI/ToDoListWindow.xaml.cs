@@ -37,6 +37,9 @@ namespace NoteApplicationGUI
 
         }
 
-        
+        private void ToDoListDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

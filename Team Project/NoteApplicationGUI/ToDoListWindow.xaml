@@ -22,20 +22,20 @@
                    FontSize="20" FontFamily="Comic Sans MS">
             New to-do list
         </TextBlock>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="1" VerticalAlignment="Center"
-                   HorizontalAlignment="Left" Margin="68,54,0,286" Height="30"
-                   FontSize="20" FontFamily="Comic Sans MS" Grid.RowSpan="2" Width="92">
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="1" VerticalAlignment="Top"
+                   HorizontalAlignment="Left" Margin="79,54,0,0" Height="30"
+                   FontSize="20" FontFamily="Comic Sans MS" Grid.RowSpan="2" Width="80">
             Headline:
         </TextBlock>
 
-        <TextBox Grid.Row="0" HorizontalAlignment="Left" Margin="165,54,0,0" Background="SeaShell"
-                 FontSize="20" FontFamily="Comic Sans MS" Width="568" RenderTransformOrigin="1.379,1.042" 
+        <TextBox Grid.Row="0" HorizontalAlignment="Left" Margin="171,54,0,0" Background="SeaShell"
+                 FontSize="20" FontFamily="Comic Sans MS" Width="550" RenderTransformOrigin="1.379,1.042" 
                  Height="30" VerticalAlignment="Top" Grid.RowSpan="2"/>
 
         <DataGrid Name="ToDoListDataGrid" AutoGenerateColumns="False" IsReadOnly="False"
                       FontSize="18" FontFamily="Comic Sans MS" RowBackground="SeaShell" Background="SeaShell"
                       VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" Margin="0,20,0,0"
-                      HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" Height="270">
+                      HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" Height="270" SelectionChanged="ToDoListDataGrid_SelectionChanged">
 
             <DataGrid.Columns>
                 <DataGridTextColumn Header="№">
@@ -83,18 +83,8 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
             </DataGrid.Columns>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
-            <TextBox/>
+            <!--<TextBox/>-->
+
 
         </DataGrid>
 
