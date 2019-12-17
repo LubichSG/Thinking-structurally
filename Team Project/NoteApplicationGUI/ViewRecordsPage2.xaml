@@ -11,35 +11,38 @@
     <Grid>
         <StackPanel Height="150" 
                     VerticalAlignment="Top" Orientation="Horizontal">
-            <TextBox Height="70" Width="150" Margin="30"
+            <Button Height="70" Width="60" Margin="75 0 0 0"
                     VerticalAlignment="Center" HorizontalAlignment="Center"
                     FontSize="40" FontFamily="Comic Sans MS"
-                    Name="TextBox1">
-            </TextBox>
-            <TextBox Height="70" Width="150" Margin="50 30 50 30"
+                    Name="AddNote" Background="Transparent" BorderBrush="Transparent"
+                    Click="AddNote_Click">
+                <Image Source="Resources/AddButtonVersion1.png" Stretch="Uniform" Height="Auto"></Image>
+
+            </Button>
+            <Button Height="70" Width="150" Margin="125 30 50 30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox2"/>
-            <TextBox Height="70" Width="150" Margin="30"
+                 FontSize="18" FontFamily="Comic Sans MS" Background="SeaShell"
+                 Name="Note1" Click="Note1_Click"/>
+            <Button Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox3"/>
+                 FontSize="18" FontFamily="Comic Sans MS" Background="SeaShell"
+                 Name="Note2" Click="Note2_Click"/>
         </StackPanel>
 
         <StackPanel Height="150" 
                     VerticalAlignment="Bottom" Orientation="Horizontal">
-            <TextBox Height="70" Width="150" Margin="30"
+            <Button Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox4"/>
-            <TextBox Height="70" Width="150" Margin="50 30 50 30"
+                 FontSize="18" FontFamily="Comic Sans MS" Background="SeaShell"
+                 Name="Note3" Click="Note3_Click"/>
+            <Button Height="70" Width="150" Margin="50 30 50 30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox5"/>
-            <TextBox Height="70" Width="150" Margin="30"
+                 FontSize="18" FontFamily="Comic Sans MS" Background="SeaShell"
+                 Name="Note4" Click="Note4_Click"/>
+            <Button Height="70" Width="150" Margin="30"
                  VerticalAlignment="Center" HorizontalAlignment="Center"
-                 FontSize="18" FontFamily="Comic Sans MS"
-                 Name="TextBox6"/>
+                 FontSize="18" FontFamily="Comic Sans MS" Background="SeaShell"
+                 Name="Note5" Click="Note5_Click"/>
         </StackPanel>
     </Grid>
 </Page>

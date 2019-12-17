@@ -113,7 +113,7 @@ namespace Team_Project
             return id;
         }
 
-        public List<Note> FindAllUserIdeasNotes(User user)
+        public List<Note> FindAllUserNotes(User user)
         {
             List<Note> notes = new List<Note>();
             notes.AddRange(notesHaphazard.Where(n => n.User == user).ToList());
