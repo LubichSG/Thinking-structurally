@@ -40,17 +40,25 @@ namespace NoteApplicationGUI
 
         
         private void SaveButton_Click(object sender, RoutedEventArgs e)
-        { if(!String.IsNullOrEmpty(RecordTextBox.Text))
+        { if(!String.IsNullOrEmpty(RecordTextBox.Text) && !String.IsNullOrEmpty(HeadlineBox.Text))
             {
-                if (++count == 1)
+                if (count == 0)
                 {
-                    id = noteManager.SaveNoteHaphazardIdeas(0,HeadlineBox.Text, DateTime.Now, RecordTextBox.Text, _user.Id);
+                    if (noteManager.UniqueHeadline(HeadlineBox.Text))
+                    {
+                        id = noteManager.SaveNoteHaphazardIdeas(0, HeadlineBox.Text, DateTime.Now, RecordTextBox.Text, _user.Id);
+                        count++;
+                    }
+                    else { MessageBox.Show("Headline is not unique!"); }
                 }
                 else
                 {
+                    
                     noteManager.SaveNoteHaphazardIdeas(id, HeadlineBox.Text, DateTime.Now, RecordTextBox.Text, _user.Id);
+                    
                 }
             }
+        else { MessageBox.Show("Headline and text box must be filled!"); }
 
         }
     }
