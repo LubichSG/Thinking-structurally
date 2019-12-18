@@ -68,7 +68,7 @@ namespace Team_Project
             };
             Serialize(NotesFileName, data);
         }
-       
+
         public int SaveNoteHaphazardIdeas(int id, string headline, DateTime date, string content, int userId)
         {
 
@@ -79,7 +79,8 @@ namespace Team_Project
                 var noteHaphazard = new NoteHaphazardIdeas(headline, id, date, content, user, userId);
                 notesHaphazard.Add(noteHaphazard);
             }
-            else {
+            else
+            {
                 var note = notesHaphazard.FirstOrDefault(u => u.Id == id);
                 note.Content = content;
                 note.Headline = headline;
@@ -108,7 +109,7 @@ namespace Team_Project
                 note.Headline = headline;
                 note.Date = DateTime.Now;
             }
-            
+
             SaveData();
             return id;
         }
@@ -122,6 +123,27 @@ namespace Team_Project
             }
             else return false;
         }
+
+        //public List<Note> FindAllUserNotes(User user)
+        //{
+        //    List<Note> notes = new List<Note>();
+        //    notes.Add(notesHaphazard.Where(n => n.User == user).ToList());
+        //    notes.Add(notesToDo.Where(n => n.User == user).ToList());
+        //    var sortedNotes = from n in notes
+        //                      orderby n.Date descending
+        //                      select n;
+        //    return sortedNotes.ToList();
+        //}
+
+        //public Note FindNoteByUserAndHeadline(User user, string headline)
+        //{
+        //    List<Note> notes = new List<Note>();
+        //    notes.Add(notesHaphazard.Where(n => n.User == user).ToList());
+        //    notes.Add(notesToDo.Where(n => n.User == user).ToList());
+        //    return notes.First(n => n.Headline == headline);
+        //}
+
+
         //public List<Note> FindAllUserNotes(User user)
         //{
         //    List<Note> notes = new List<Note>();
@@ -140,5 +162,6 @@ namespace Team_Project
         //    notes.Add(notesToDo.Where(n => n.User == user).ToList());
         //    return notes.First(n => n.Headline == headline);
         //}
+
     }
 }
