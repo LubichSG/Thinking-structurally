@@ -131,7 +131,6 @@ namespace Team_Project
             notes.AddRange(notesToDo.Where(n => n.User == user).ToList());
             return notes.First(n => n.Headline == headline);
         }
-
-
+        
     }
 }

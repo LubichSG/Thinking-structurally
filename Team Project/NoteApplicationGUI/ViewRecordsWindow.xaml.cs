@@ -59,7 +59,7 @@ namespace NoteApplicationGUI
 
         public void ShowNote(User user, string headline)
         {
-            var noteToView = noteManager.FindNoteByUserAndHeadline(user, headline);
+        //    var noteToView = noteManager.FindNoteByUserAndHeadline(user, headline);
         }
 
         //public void ShowButtonsToAddNote()

@@ -45,7 +45,7 @@ namespace NoteApplicationGUI
 
         private void ViewNotesButton_Click(object sender, RoutedEventArgs e)
         {
-            var userNotes = noteManager.FindAllUserNotes(_user);
+            //var userNotes = noteManager.FindAllUserNotes(_user);
             ViewRecordsWindow viewWindow = new ViewRecordsWindow(_user, userNotes);
             viewWindow.userClosedWindow += SeeThisWindowAgain;
             viewWindow.Show();
