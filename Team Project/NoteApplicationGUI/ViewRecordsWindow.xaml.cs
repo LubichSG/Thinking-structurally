@@ -19,6 +19,7 @@ namespace NoteApplicationGUI
     public partial class ViewRecordsWindow : Window
     {
         UserManager userManager = new UserManager();
+        NoteManager noteManager = new NoteManager();
         public User _user;
         public List<Note> _notes;
         public event Action<Window> userClosedWindow;
@@ -36,37 +37,42 @@ namespace NoteApplicationGUI
             userClosedWindow?.Invoke(this);
         }
 
-        private void HaphazardIdeaButton_Click(object sender, RoutedEventArgs e)
+        public void AddHaphazardIdea()
         {
             HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow(_user);
             ideaWindow.userClosedWindow += SeeThisWindowAgain;
             ideaWindow.Show();
-            HaphazardIdeaButton.Visibility = Visibility.Hidden;
-            ToDoListButton.Visibility = Visibility.Hidden;
+            //HaphazardIdeaButton.Visibility = Visibility.Hidden;
+            //ToDoListButton.Visibility = Visibility.Hidden;
             this.Hide();
         }
 
-        private void ToDoListButton_Click(object sender, RoutedEventArgs e)
+        public void AddToDoList()
         {
             ToDoListWindow listWindow = new ToDoListWindow(_user);
             listWindow.userClosedWindow += SeeThisWindowAgain;
             listWindow.Show();
-            HaphazardIdeaButton.Visibility = Visibility.Hidden;
-            ToDoListButton.Visibility = Visibility.Hidden;
+            //HaphazardIdeaButton.Visibility = Visibility.Hidden;
+            //ToDoListButton.Visibility = Visibility.Hidden;
             this.Hide();
         }
 
-        public void ShowButtonsToAddNote()
+        public void ShowNote(User user, string headline)
         {
-            HaphazardIdeaButton.Visibility = Visibility.Visible;
-            ToDoListButton.Visibility = Visibility.Visible;
+            var noteToView = noteManager.FindNoteByUserAndHeadline(user, headline);
         }
 
-        public void ShowButtonToViewNote(Note note)
-        {
-            //ViewNote.Visibility = Visibility.Visible;
-            noteToView = note;
-        }
+        //public void ShowButtonsToAddNote()
+        //{
+        //    HaphazardIdeaButton.Visibility = Visibility.Visible;
+        //    ToDoListButton.Visibility = Visibility.Visible;
+        //}
+
+        //public void ShowButtonToViewNote(Note note)
+        //{
+        //    ViewNote.Visibility = Visibility.Visible;
+        //    noteToView = note;
+        //}
 
         private void SeeThisWindowAgain(Window window)
         {
@@ -74,25 +80,30 @@ namespace NoteApplicationGUI
             window.Close();
         }
 
-        private void Forward_Click(object sender, RoutedEventArgs e)
+
+        private void IdeasButton_Click(object sender, RoutedEventArgs e)
         {
-            HaphazardIdeaButton.Visibility = Visibility.Hidden;
-            ToDoListButton.Visibility = Visibility.Hidden;
-            ViewRecordsPage2 page = new ViewRecordsPage2();
+            IdeasButton.Background = Brushes.LightSeaGreen;
+            ListsButton.Background = Brushes.SeaShell;
+            //HaphazardIdeaButton.Visibility = Visibility.Hidden;
+            //ToDoListButton.Visibility = Visibility.Hidden;
+            ViewIdeasPage page = new ViewIdeasPage(this, _notes, _user);
             ViewContent.Content = page;
         }
 
-        private void Back_Click(object sender, RoutedEventArgs e)
+        private void ListsButton_Click(object sender, RoutedEventArgs e)
         {
-            HaphazardIdeaButton.Visibility = Visibility.Hidden;
-            ToDoListButton.Visibility = Visibility.Hidden;
-            ViewRecordsPage1 page = new ViewRecordsPage1(this, _notes, _user);
+            ListsButton.Background = Brushes.LightSeaGreen;
+            IdeasButton.Background = Brushes.SeaShell;
+            //HaphazardIdeaButton.Visibility = Visibility.Hidden;
+            //ToDoListButton.Visibility = Visibility.Hidden;
+            ViewListsPage page = new ViewListsPage(this, _notes, _user);
             ViewContent.Content = page;
         }
 
-        private void ViewNote_Click(object sender, RoutedEventArgs e)
-        {
+        //private void ViewNote_Click(object sender, RoutedEventArgs e)
+        //{
             
-        }
+        //}
     }
 }
