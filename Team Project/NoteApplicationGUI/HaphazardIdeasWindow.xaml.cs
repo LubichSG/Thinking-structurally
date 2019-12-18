@@ -35,7 +35,7 @@ namespace NoteApplicationGUI
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(HeadlineBox.Text) && !String.IsNullOrEmpty(RecordTextBox.Text))
+            if (!String.IsNullOrEmpty(RecordTextBox.Text) && !String.IsNullOrEmpty(HeadlineBox.Text))
                 {
                 MessageBox.Show("Do not want to save the record?");
                 }
