@@ -112,7 +112,16 @@ namespace Team_Project
             SaveData();
             return id;
         }
-
+        public bool UniqueHeadline(string headline)
+        {
+            var noteToDo = notesToDo.FirstOrDefault(u => u.Headline == headline);
+            var noteHaphazard = notesHaphazard.FirstOrDefault(u => u.Headline == headline);
+            if (noteToDo == null && noteHaphazard == null)
+            {
+                return true;
+            }
+            else return false;
+        }
         //public List<Note> FindAllUserNotes(User user)
         //{
         //    List<Note> notes = new List<Note>();

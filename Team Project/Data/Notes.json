@@ -1,10 +1,40 @@
 {
   "NotesHaphazard": [
     {
-      "Content": "O brave new world",
-      "Headline": "Hello World!",
+      "Content": "zxcx",
+      "Headline": "1",
       "Id": 1,
-      "Date": "2019-12-15T22:43:23.2422335+03:00",
+      "Date": "2019-12-18T10:36:19.0474964+03:00",
+      "User": {
+        "Id": 1,
+        "Name": "Elliot",
+        "Surname": "Alderson",
+        "Phone": "+79102338080",
+        "Login": "+79102338080",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 1
+    },
+    {
+      "Content": "ha-ha",
+      "Headline": "Hello!",
+      "Id": 1,
+      "Date": "2019-12-18T10:34:43.9200993+03:00",
+      "User": {
+        "Id": 1,
+        "Name": "Elliot",
+        "Surname": "Alderson",
+        "Phone": "+79102338080",
+        "Login": "+79102338080",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 1
+    },
+    {
+      "Content": "zxcx",
+      "Headline": "1",
+      "Id": 1,
+      "Date": "2019-12-18T10:36:12.9236604+03:00",
       "User": {
         "Id": 1,
         "Name": "Elliot",
