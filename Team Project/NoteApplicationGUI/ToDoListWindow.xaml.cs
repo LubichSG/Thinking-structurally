@@ -16,7 +16,7 @@ namespace NoteApplicationGUI
     /// <summary>
     /// Логика взаимодействия для ToDoListWindow.xaml
     /// </summary>
-    public partial class ToDoListWindow : Window
+    public partial class ToDoListWindow : Window  
     {
         UserManager userManager = new UserManager();
         public User _user;

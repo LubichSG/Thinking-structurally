@@ -30,7 +30,7 @@ namespace NoteApplicationGUI
         private void UnregisterButton_Click(object sender, RoutedEventArgs e)
         {
             WelcomeWindow welcomeWindow = new WelcomeWindow();
-            welcomeWindow.Show();
+            welcomeWindow.Show();  
             this.Close();
         }
 

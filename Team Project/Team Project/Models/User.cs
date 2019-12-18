@@ -17,7 +17,7 @@ namespace Team_Project
         {
             Id = id;
             Name = name;
-            Surname = surname;
+            Surname = surname; 
             Phone = phone;
             Login = login;
             Password = password;

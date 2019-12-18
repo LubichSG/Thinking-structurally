@@ -31,7 +31,7 @@ namespace NoteApplicationGUI
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            userClosedWindow?.Invoke(this);
+            userClosedWindow?.Invoke(this);  
         }
 
         private void ToDoListButton_Click(object sender, RoutedEventArgs e)

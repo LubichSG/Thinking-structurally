@@ -29,7 +29,7 @@ namespace NoteApplicationGUI
         public HaphazardIdeasWindow(User user)
         {
             InitializeComponent();
-            _user = user;
+            _user = user;  
             count = 0;
         }
 

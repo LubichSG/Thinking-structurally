@@ -21,7 +21,7 @@ namespace NoteApplicationGUI
         UserManager userManager = new UserManager();
         public AuthorizeWindow()
         {
-            InitializeComponent();
+            InitializeComponent();  
         }
 
         private void AuthorizeButton_Click(object sender, RoutedEventArgs e)

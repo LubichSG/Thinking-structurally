@@ -26,7 +26,7 @@ namespace NoteApplicationGUI
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             AuthorizeWindow authWindow = new AuthorizeWindow();
-            authWindow.Show();
+            authWindow.Show();  
             this.Close();
         }
 

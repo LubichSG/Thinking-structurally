@@ -15,7 +15,7 @@ namespace Team_Project
             Number = number;
             EventDate = eventDate;
             Task = task;
-            Finished = finished;
+            Finished = finished; 
         }
     }
     

@@ -44,5 +44,7 @@
                  FontSize="18" FontFamily="Comic Sans MS" Background="SeaShell"
                  Name="Note5" Click="Note5_Click"/>
         </StackPanel>
+        
+        
     </Grid>
 </Page>

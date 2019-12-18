@@ -69,6 +69,8 @@ namespace NoteApplicationGUI
         private void NameButtons(Button button, Note note)
         {
             button.Content = note.Headline;
-        }
+        } 
+
+
     }
 }

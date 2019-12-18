@@ -17,7 +17,7 @@ namespace Team_Project
 
         public UserManager()
         {
-            LoadData();
+            LoadData();  
         }
         private string PasswordHash(string password)
         {

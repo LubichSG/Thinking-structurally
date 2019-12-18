@@ -70,5 +70,7 @@ namespace NoteApplicationGUI
         {
             button.Content = note.Headline;
         }
+
+
     }
 }
