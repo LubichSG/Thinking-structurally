@@ -68,7 +68,7 @@ namespace Team_Project
             };
             Serialize(NotesFileName, data);
         }
-       
+
         public int SaveNoteHaphazardIdeas(int id, string headline, DateTime date, string content, int userId)
         {
 
@@ -79,7 +79,8 @@ namespace Team_Project
                 var noteHaphazard = new NoteHaphazardIdeas(headline, id, date, content, user, userId);
                 notesHaphazard.Add(noteHaphazard);
             }
-            else {
+            else
+            {
                 var note = notesHaphazard.FirstOrDefault(u => u.Id == id);
                 note.Content = content;
                 note.Headline = headline;
@@ -108,7 +109,7 @@ namespace Team_Project
                 note.Headline = headline;
                 note.Date = DateTime.Now;
             }
-            
+
             SaveData();
             return id;
         }
@@ -131,6 +132,17 @@ namespace Team_Project
             notes.AddRange(notesToDo.Where(n => n.User == user).ToList());
             return notes.First(n => n.Headline == headline);
         }
-        
+
+        public bool UniqueHeadline(string headline)
+        {
+            var noteToDo = notesToDo.FirstOrDefault(u => u.Headline == headline);
+            var noteHaphazard = notesHaphazard.FirstOrDefault(u => u.Headline == headline);
+            if (noteToDo == null && noteHaphazard == null)
+            {
+                return true;
+            }
+            else return false;
+
+        }
     }
 }

@@ -1,10 +1,10 @@
 {
   "NotesHaphazard": [
     {
-      "Content": "zxcx",
-      "Headline": "1",
+      "Content": "Я просто хочу выйти в окно",
+      "Headline": "Эх",
       "Id": 1,
-      "Date": "2019-12-18T10:36:19.0474964+03:00",
+      "Date": "2019-12-18T15:01:32.6688447+03:00",
       "User": {
         "Id": 1,
         "Name": "Elliot",
@@ -35,6 +35,36 @@
       "Headline": "1",
       "Id": 1,
       "Date": "2019-12-18T10:36:12.9236604+03:00",
+      "User": {
+        "Id": 1,
+        "Name": "Elliot",
+        "Surname": "Alderson",
+        "Phone": "+79102338080",
+        "Login": "+79102338080",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 1
+    },
+    {
+      "Content": "Я просто хочу выйти в окно",
+      "Headline": "Лишь бы все работало ",
+      "Id": 1,
+      "Date": "2019-12-18T15:00:48.7933921+03:00",
+      "User": {
+        "Id": 1,
+        "Name": "Elliot",
+        "Surname": "Alderson",
+        "Phone": "+79102338080",
+        "Login": "+79102338080",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 1
+    },
+    {
+      "Content": "123",
+      "Headline": "Что-то пошло не так",
+      "Id": 1,
+      "Date": "2019-12-18T15:02:01.4156367+03:00",
       "User": {
         "Id": 1,
         "Name": "Elliot",
