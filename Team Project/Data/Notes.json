@@ -119,6 +119,21 @@
         "Password": "xMpCOKC5I4INzFCab3WEmw=="
       },
       "UserId": 1
+    },
+    {
+      "Content": "заработай!!!",
+      "Headline": "соне пора в кино",
+      "Id": 23,
+      "Date": "2019-12-19T22:06:49.9721793+03:00",
+      "User": {
+        "Id": 1,
+        "Name": "Elliot",
+        "Surname": "Alderson",
+        "Phone": "+79102338080",
+        "Login": "+79102338080",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 1
     }
   ],
   "NotesToDo": [

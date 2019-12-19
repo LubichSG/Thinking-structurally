@@ -8,17 +8,21 @@ using Newtonsoft.Json;
 
 namespace Team_Project
 {
-    public class NoteManager
+    public class NoteManager : Manager
     {
         private List<NoteHaphazardIdeas> notesHaphazard;
         private List<NoteToDoList> notesToDo;
         private List<User> users;
         public UserManager userManager = new UserManager();
+
+
         private class NotesData
         {
             public List<NoteHaphazardIdeas> NotesHaphazard { get; set; }
             public List<NoteToDoList> NotesToDo { get; set; }
         }
+
+
         public NoteManager()
         {
             LoadData();
@@ -27,39 +31,16 @@ namespace Team_Project
         private const string NotesFileName = "../../../../data/notes.json";
         private const string UsersFileName = "../../../../data/users.json";
 
-        private T Deserialize<T>(string fileName)
-        {
-            using (var sr = new StreamReader(fileName))
-            {
-                using (var jsonReader = new JsonTextReader(sr))
-                {
-                    var serializer = new JsonSerializer();
-                    return serializer.Deserialize<T>(jsonReader);
-                }
-            }
-        }
 
-        private void Serialize<T>(string fileName, T data)
-        {
-            using (var sw = new StreamWriter(fileName))
-            {
-                using (var jsonWriter = new JsonTextWriter(sw))
-                {
-                    jsonWriter.Formatting = Newtonsoft.Json.Formatting.Indented;
-                    var serializer = new JsonSerializer();
-                    serializer.Serialize(jsonWriter, data);
-                }
-            }
-        }
-
-        private void LoadData()
+        protected override void LoadData()
         {
             var data = Deserialize<NotesData>(NotesFileName);
             notesHaphazard = data?.NotesHaphazard ?? new List<NoteHaphazardIdeas>();
             notesToDo = data?.NotesToDo ?? new List<NoteToDoList>();
             users = Deserialize<List<User>>(UsersFileName);
         }
-        private void SaveData()
+
+        protected override void SaveData()
         {
             var data = new NotesData
             {
@@ -90,8 +71,7 @@ namespace Team_Project
             return id;
         }
 
-        // у savelist переделать на list
-        //public int SaveNoteToDoList(int id, string headline, DateTime date, int number, DateTime eventDate, string task, bool finished, int userId)
+
         public int SaveNoteToDoList(string headline, int id, DateTime date, List<ContentToDo> notes, int userId)
         {
             if (id == 0)
@@ -104,11 +84,6 @@ namespace Team_Project
             else
             {
                 var note = notesToDo.FirstOrDefault(u => u.Id == id);
-
-                //note.ContentToDo.EventDate = eventDate;
-                //note.ContentToDo.Task = task;
-                //note.ContentToDo.Finished = finished;
-                //note.ContentToDo.Number = number;
                 note.Notes = notes;
                 note.Headline = headline;
                 note.Date = DateTime.Now;
@@ -146,22 +121,6 @@ namespace Team_Project
             return notes.First(n => n.Headline == headline);
         }
 
-        //public Note FindNoteByUserAndHeadline(User user, string headline)
-        //{
-        //    var ideaNotes = FindAllUserIdeaNotes(user);
-        //    var listNotes = FindAllUserListNotes(user);
-        //    foreach (var note in ideaNotes)
-        //    {
-        //        if (note.Headline == headline)
-        //            return note;
-        //    }
-        //    foreach (var note in listNotes)
-        //    {
-        //        if (note.Headline == headline)
-        //            return note;
-        //    }
-        //    return null;
-        //}
 
         public bool UniqueHeadline(string headline)
         {
@@ -172,7 +131,6 @@ namespace Team_Project
                 return true;
             }
             else return false;
-
         }
     }
 }
