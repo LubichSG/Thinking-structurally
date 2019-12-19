@@ -1,10 +1,10 @@
 {
   "NotesHaphazard": [
     {
-      "Content": "Я просто хочу выйти в окно",
-      "Headline": "Эх",
+      "Content": "Работает?????",
+      "Headline": "хочу домой",
       "Id": 1,
-      "Date": "2019-12-18T15:01:32.6688447+03:00",
+      "Date": "2019-12-19T11:34:39.7335303+03:00",
       "User": {
         "Id": 1,
         "Name": "Elliot",
@@ -65,6 +65,36 @@
       "Headline": "Что-то пошло не так",
       "Id": 1,
       "Date": "2019-12-18T15:02:01.4156367+03:00",
+      "User": {
+        "Id": 1,
+        "Name": "Elliot",
+        "Surname": "Alderson",
+        "Phone": "+79102338080",
+        "Login": "+79102338080",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 1
+    },
+    {
+      "Content": "Работает?",
+      "Headline": "хочу домой",
+      "Id": 1,
+      "Date": "2019-12-19T11:33:36.6273612+03:00",
+      "User": {
+        "Id": 1,
+        "Name": "Elliot",
+        "Surname": "Alderson",
+        "Phone": "+79102338080",
+        "Login": "+79102338080",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 1
+    },
+    {
+      "Content": "надеюсь",
+      "Headline": "Все ли хорошо?",
+      "Id": 1,
+      "Date": "2019-12-19T11:37:35.2738662+03:00",
       "User": {
         "Id": 1,
         "Name": "Elliot",

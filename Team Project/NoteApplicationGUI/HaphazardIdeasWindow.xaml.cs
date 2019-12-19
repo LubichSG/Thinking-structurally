@@ -40,7 +40,7 @@ namespace NoteApplicationGUI
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(RecordTextBox.Text) && !String.IsNullOrEmpty(HeadlineBox.Text))
+            if (!String.IsNullOrEmpty(RecordTextBox.Text) && !String.IsNullOrEmpty(HeadlineBox.Text) && (count == 0))
                 {
                 MessageBox.Show("Do not want to save the record?");
                 }
@@ -64,6 +64,7 @@ namespace NoteApplicationGUI
                 {
                     
                     noteManager.SaveNoteHaphazardIdeas(id, HeadlineBox.Text, DateTime.Now, RecordTextBox.Text, _user.Id);
+                    //DialogResult = true;
                     
                 }
             }
