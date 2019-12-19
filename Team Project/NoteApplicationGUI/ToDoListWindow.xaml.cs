@@ -67,7 +67,7 @@ namespace NoteApplicationGUI
                 else
                 {
 
-                    noteManager.SaveNoteToDoList(HeadlineBox.Text, 0, DateTime.Now, notes, _user.Id);
+                    noteManager.SaveNoteToDoList(HeadlineBox.Text, id, DateTime.Now, notes, _user.Id);
                     //DialogResult = true;
 
 
