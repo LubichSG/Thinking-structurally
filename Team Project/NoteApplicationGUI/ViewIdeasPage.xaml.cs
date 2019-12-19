@@ -21,8 +21,8 @@ namespace NoteApplicationGUI
     {
         NoteManager noteManager = new NoteManager();
         ViewRecordsWindow _window;
-        private List<NoteHaphazardIdeas> _notes;
-        private User _user;
+        public List<NoteHaphazardIdeas> _notes;
+        public User _user;
         public ViewIdeasPage(ViewRecordsWindow window, List<NoteHaphazardIdeas> notes, User user)
         {
             InitializeComponent();
@@ -30,9 +30,16 @@ namespace NoteApplicationGUI
             _notes = notes;
             _user = user;
             var buttons = new List<Button>() { this.Note1, this.Note2, this.Note3, this.Note4, this.Note5 };
-            for (int i = 0; i < notes.Count; i++)
+            for (int i = 0; i < _notes.Count; i++)
             {
                 NameButtons(buttons[i], _notes[i]);
+            }
+            foreach(var button in buttons)
+            {
+                if (button.Content == null)
+                {
+                    button.Visibility = Visibility.Collapsed;
+                }
             }
         }
 
@@ -69,9 +76,8 @@ namespace NoteApplicationGUI
 
         private void NameButtons(Button button, Note note)
         {
-            //button.Content = note.Headline;
-            button.Content = "work i beg of you";
-        } 
+            button.Content = note.Headline;
+        }
 
 
     }
