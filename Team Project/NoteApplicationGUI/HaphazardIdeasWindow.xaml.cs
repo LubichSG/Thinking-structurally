@@ -23,6 +23,7 @@ namespace NoteApplicationGUI
         public User _user;
         public int count;
         public int id;
+        
       
         public event Action<Window> userClosedWindow;
 

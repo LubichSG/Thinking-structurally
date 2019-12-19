@@ -17,6 +17,10 @@ namespace Team_Project
             Task = task;
             Finished = finished; 
         }
+        public ContentToDo()
+        {
+           
+        }
     }
     
 }

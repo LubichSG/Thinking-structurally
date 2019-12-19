@@ -35,11 +35,11 @@
         <DataGrid Name="ToDoListDataGrid" AutoGenerateColumns="False" IsReadOnly="False"  
                       FontSize="18" FontFamily="Comic Sans MS" RowBackground="SeaShell" Background="SeaShell"
                       VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" Margin="0,20,0,0"
-                      HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" Height="270" SelectionChanged="ToDoListDataGrid_SelectionChanged">
+                      HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" Height="270" >
 
          
             <DataGrid.Columns>
-                <DataGridTextColumn Header="№" IsReadOnly="False">
+                <DataGridTextColumn Header="№" Binding="{Binding Number}" IsReadOnly="False">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="SeaShell"/>
@@ -50,7 +50,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Date"  IsReadOnly="False">
+                <DataGridTextColumn Header="Date" Binding="{Binding EventDate}" IsReadOnly="False">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="SeaShell"/>
@@ -61,7 +61,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Task"  IsReadOnly="False">
+                <DataGridTextColumn Header="Task" Binding="{Binding Task}" IsReadOnly="False">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="SeaShell"/>
@@ -72,7 +72,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Finished"  IsReadOnly="False">
+                <DataGridTextColumn Header="Finished" Binding="{Binding Finished}"  IsReadOnly="False">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="SeaShell"/>
@@ -88,7 +88,7 @@
             <TextBox IsReadOnly="False"/>
             <TextBox IsReadOnly="False"/>
             <TextBox IsReadOnly="False"/>-->
-            <TextBox IsReadOnly="False"/>
+            <!--<TextBox IsReadOnly="False"/>-->
 
 
         </DataGrid>
