@@ -66,6 +66,7 @@ namespace NoteApplicationGUI
                     
                     noteManager.SaveNoteHaphazardIdeas(id, HeadlineBox.Text, DateTime.Now, RecordTextBox.Text, _user.Id);
                     //DialogResult = true;
+                   
                     
                 }
             }

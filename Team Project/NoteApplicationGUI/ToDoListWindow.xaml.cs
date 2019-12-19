@@ -19,19 +19,23 @@ namespace NoteApplicationGUI
     public partial class ToDoListWindow : Window  
     {
         UserManager userManager = new UserManager();
+        NoteManager noteManager = new NoteManager();
         public User _user;
+        public int count;
         public event Action<Window> userClosedWindow;
         List<ContentToDo> notes = new List<ContentToDo>(); //new
         public ToDoListWindow(User user, NoteToDoList note)
-        //List<NoteToDoList> notes = new List<NoteToDoList>();
+        
         {
             InitializeComponent();
             ToDoListDataGrid.ItemsSource = notes;//new
-            //_user = user;
-            //if (note != null)
-            //{
-            //    HeadlineBox.Text = note.Headline;
-            //}
+            _user = user;
+            count = 0;
+            if (note != null)
+            {
+                HeadlineBox.Text = note.Headline;
+            }
+            
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -41,12 +45,46 @@ namespace NoteApplicationGUI
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            noteManager.SaveNoteToDoList();
+            //{
+            //    if (!String.IsNullOrEmpty(RecordTextBox.Text) && !String.IsNullOrEmpty(HeadlineBox.Text))
+            //    {
+            //        if (count == 0)
+            //        {
+            //            //if (noteManager.UniqueHeadline(HeadlineBox.Text))
+            //            //{
+            //            //    id = noteManager.SaveNoteHaphazardIdeas(0, HeadlineBox.Text, DateTime.Now, RecordTextBox.Text, _user.Id);
+            //            //    count++;
+            //            //}
+            //            //else { MessageBox.Show("Headline is not unique!"); }
+            //        }C:\Users\Софья\Source\Repos\Thinking-structurally\Team Project\Team Project\UserManager.cs
+            //        else
+            //        {
+
+            //            noteManager.SaveNoteToDoList(id, HeadlineBox.Text, DateTime.Now, Number.Text, DateTime.Now, DataGridColumnHeader.Text, RecordTextBox.Text, _user.Id)
+
+
+            //        }
+            //    }
+            //    else { MessageBox.Show("Headline and text box must be filled!"); }
+
+            //}
+            {
+            //    if (!String.IsNullOrEmpty(HeadlineBox.Text)
+                    
+            //        if(count == 0)
+            //        {
+
+
+            //        }
+                    
+                                      
+
+            //        }
+            //}
 
         }
 
-        private void ToDoListDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+         
     }
 }
