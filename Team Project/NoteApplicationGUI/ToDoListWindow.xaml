@@ -37,8 +37,9 @@
                       VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Row="1" Margin="0,20,0,0"
                       HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" Height="270" SelectionChanged="ToDoListDataGrid_SelectionChanged">
 
+         
             <DataGrid.Columns>
-                <DataGridTextColumn Header="№">
+                <DataGridTextColumn Header="№" IsReadOnly="False">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="SeaShell"/>
@@ -49,7 +50,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Date">
+                <DataGridTextColumn Header="Date"  IsReadOnly="False">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="SeaShell"/>
@@ -60,7 +61,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Task">
+                <DataGridTextColumn Header="Task"  IsReadOnly="False">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="SeaShell"/>
@@ -71,7 +72,7 @@
                         </Style>
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Finished">
+                <DataGridTextColumn Header="Finished"  IsReadOnly="False">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="Background" Value="SeaShell"/>
@@ -83,7 +84,11 @@
                     </DataGridTextColumn.HeaderStyle>
                 </DataGridTextColumn>
             </DataGrid.Columns>
-            <!--<TextBox/>-->
+            <!--<TextBox IsReadOnly="False"/>
+            <TextBox IsReadOnly="False"/>
+            <TextBox IsReadOnly="False"/>
+            <TextBox IsReadOnly="False"/>-->
+            <TextBox IsReadOnly="False"/>
 
 
         </DataGrid>
