@@ -39,7 +39,7 @@ namespace NoteApplicationGUI
 
         public void AddHaphazardIdea()
         {
-            HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow(_user);
+            HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow(_user, null);
             ideaWindow.userClosedWindow += SeeThisWindowAgain;
             ideaWindow.Show();
             //HaphazardIdeaButton.Visibility = Visibility.Hidden;
@@ -49,7 +49,7 @@ namespace NoteApplicationGUI
 
         public void AddToDoList()
         {
-            ToDoListWindow listWindow = new ToDoListWindow(_user);
+            ToDoListWindow listWindow = new ToDoListWindow(_user, null);
             listWindow.userClosedWindow += SeeThisWindowAgain;
             listWindow.Show();
             //HaphazardIdeaButton.Visibility = Visibility.Hidden;
@@ -59,7 +59,23 @@ namespace NoteApplicationGUI
 
         public void ShowNote(User user, string headline)
         {
-        //    var noteToView = noteManager.FindNoteByUserAndHeadline(user, headline);
+            var noteToView = noteManager.FindNoteByUserAndHeadline(user, headline);
+            try
+            {
+                var newNoteToView = noteToView as NoteHaphazardIdeas;
+                HaphazardIdeasWindow ideasWindow = new HaphazardIdeasWindow(user, newNoteToView);
+                ideasWindow.userClosedWindow += SeeThisWindowAgain;
+                ideasWindow.Show();
+                this.Hide();
+            }
+            catch
+            {
+                var newNoteToView = noteToView as NoteToDoList;
+                ToDoListWindow listWindow = new ToDoListWindow(user, newNoteToView);
+                listWindow.userClosedWindow += SeeThisWindowAgain;
+                listWindow.Show();
+                this.Hide();
+            }
         }
 
         //public void ShowButtonsToAddNote()

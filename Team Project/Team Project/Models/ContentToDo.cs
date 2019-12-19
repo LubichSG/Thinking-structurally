@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Team_Project
 {
-    class ContentToDo
+    public class ContentToDo
     {
         public int Number { get; set; }
         public DateTime EventDate { get; set; }

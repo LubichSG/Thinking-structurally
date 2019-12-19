@@ -114,10 +114,19 @@ namespace Team_Project
             return id;
         }
 
-        public List<Note> FindAllUserNotes(User user)
+        public List<NoteHaphazardIdeas> FindAllUserIdeaNotes(User user)
         {
-            List<Note> notes = new List<Note>();
+            List<NoteHaphazardIdeas> notes = new List<NoteHaphazardIdeas>();
             notes.AddRange(notesHaphazard.Where(n => n.User == user).ToList());
+            var sortedNotes = from n in notes
+                              orderby n.Date descending
+                              select n;
+            return sortedNotes.ToList();
+        }
+
+        public List<NoteToDoList> FindAllUserListNotes(User user)
+        {
+            List<NoteToDoList> notes = new List<NoteToDoList>();
             notes.AddRange(notesToDo.Where(n => n.User == user).ToList());
             var sortedNotes = from n in notes
                               orderby n.Date descending
@@ -132,6 +141,23 @@ namespace Team_Project
             notes.AddRange(notesToDo.Where(n => n.User == user).ToList());
             return notes.First(n => n.Headline == headline);
         }
+
+        //public Note FindNoteByUserAndHeadline(User user, string headline)
+        //{
+        //    var ideaNotes = FindAllUserIdeaNotes(user);
+        //    var listNotes = FindAllUserListNotes(user);
+        //    foreach (var note in ideaNotes)
+        //    {
+        //        if (note.Headline == headline)
+        //            return note;
+        //    }
+        //    foreach (var note in listNotes)
+        //    {
+        //        if (note.Headline == headline)
+        //            return note;
+        //    }
+        //    return null;
+        //}
 
         public bool UniqueHeadline(string headline)
         {

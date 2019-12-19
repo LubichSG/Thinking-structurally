@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Team_Project
 {
-    class NoteHaphazardIdeas: Note
+    public class NoteHaphazardIdeas: Note
     {
         public string Content { get; set; }
 
