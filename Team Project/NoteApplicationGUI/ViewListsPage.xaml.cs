@@ -21,16 +21,16 @@ namespace NoteApplicationGUI
     {
         NoteManager noteManager = new NoteManager();
         ViewRecordsWindow _window;
-        private List<Note> _notes;
+        private List<NoteToDoList> _notes;
         private User _user;
-        public ViewListsPage(ViewRecordsWindow window, List<Note> notes, User user)
+        public ViewListsPage(ViewRecordsWindow window, List<NoteToDoList> notes, User user)
         {
             InitializeComponent();
             _window = window;
             _notes = notes;
             _user = user;
             var buttons = new List<Button>() { this.Note1, this.Note2, this.Note3, this.Note4, this.Note5 };
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < notes.Count; i++)
             {
                 NameButtons(buttons[i], _notes[i]);
             }

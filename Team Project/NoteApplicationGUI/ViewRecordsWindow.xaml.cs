@@ -105,7 +105,7 @@ namespace NoteApplicationGUI
             ListsButton.Background = Brushes.SeaShell;
             //HaphazardIdeaButton.Visibility = Visibility.Hidden;
             //ToDoListButton.Visibility = Visibility.Hidden;
-            ViewIdeasPage page = new ViewIdeasPage(this, _notes, _user);
+            ViewIdeasPage page = new ViewIdeasPage(this, _ideaNotes, _user);
             ViewContent.Content = page;
         }
 
@@ -115,7 +115,7 @@ namespace NoteApplicationGUI
             IdeasButton.Background = Brushes.SeaShell;
             //HaphazardIdeaButton.Visibility = Visibility.Hidden;
             //ToDoListButton.Visibility = Visibility.Hidden;
-            ViewListsPage page = new ViewListsPage(this, _notes, _user);
+            ViewListsPage page = new ViewListsPage(this, _listNotes, _user);
             ViewContent.Content = page;
         }
 
