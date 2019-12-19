@@ -36,7 +36,7 @@ namespace NoteApplicationGUI
 
         private void ToDoListButton_Click(object sender, RoutedEventArgs e)
         {
-            ToDoListWindow listWindow = new ToDoListWindow(_user);
+            ToDoListWindow listWindow = new ToDoListWindow(_user, null);
             listWindow.userClosedWindow += SeeThisWindowAgain;
             listWindow.Show();
             this.Hide();
@@ -44,7 +44,7 @@ namespace NoteApplicationGUI
 
         private void HaphazardIdeaButton_Click(object sender, RoutedEventArgs e)
         {
-            HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow(_user);
+            HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow(_user, null);
             ideaWindow.userClosedWindow += SeeThisWindowAgain;
             ideaWindow.Show();
             this.Hide();

@@ -21,10 +21,14 @@ namespace NoteApplicationGUI
         UserManager userManager = new UserManager();
         public User _user;
         public event Action<Window> userClosedWindow;
-        public ToDoListWindow(User user)
+        public ToDoListWindow(User user, NoteToDoList note)
         {
             InitializeComponent();
             _user = user;
+            if (note != null)
+            {
+                HeadlineBox.Text = note.Headline;
+            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

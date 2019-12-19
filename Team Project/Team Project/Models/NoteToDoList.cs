@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Team_Project
 {
-    class NoteToDoList: Note
+    public class NoteToDoList: Note
     {
         
         public ContentToDo ContentToDo { get; set; }

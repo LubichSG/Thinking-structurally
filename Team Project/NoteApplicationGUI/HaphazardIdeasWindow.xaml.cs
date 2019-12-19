@@ -26,11 +26,16 @@ namespace NoteApplicationGUI
       
         public event Action<Window> userClosedWindow;
 
-        public HaphazardIdeasWindow(User user)
+        public HaphazardIdeasWindow(User user, NoteHaphazardIdeas note)
         {
             InitializeComponent();
             _user = user;  
             count = 0;
+            if(note != null)
+            {
+                HeadlineBox.Text = note.Headline;
+                RecordTextBox.Text = note.Content;
+            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
