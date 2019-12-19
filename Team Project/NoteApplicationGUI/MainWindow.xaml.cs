@@ -27,30 +27,20 @@ namespace NoteApplicationGUI
 
 
         public User _user;
-        
-        //public ParkingSession _currentSession;
-        //public List<ParkingSession> _pastSessions;
-        //public List<DateTime> entryDTs;
-        //public MainWindow(string login)
-        //{
-        //    InitializeComponent();
-        //    this.Show();
-        //    _parkingManager = new ParkingManager();
-        //    _currentUser = _parkingManager.ReturnUser(login);
 
             public MainWindow(User user)
         {
             InitializeComponent();
             _user = user;
         }
-        //Настя, я закоменнтрировала это окно потому что тут было подчеркнуто 
         private void ViewNotesButton_Click(object sender, RoutedEventArgs e)
         {
-        //    //var userNotes = noteManager.FindAllUserNotes(_user);
-        //    ViewRecordsWindow viewWindow = new ViewRecordsWindow(_user, userNotes);
-        //    viewWindow.userClosedWindow += SeeThisWindowAgain;
-        //    viewWindow.Show();
-        //    this.Hide();
+            var ideaNotes = noteManager.FindAllUserIdeaNotes(_user);
+            var listNotes = noteManager.FindAllUserListNotes(_user);
+            ViewRecordsWindow viewWindow = new ViewRecordsWindow(_user, ideaNotes, listNotes);
+            viewWindow.userClosedWindow += SeeThisWindowAgain;
+            viewWindow.Show();
+            this.Hide();
         }
 
         private void CreateNoteButton_Click(object sender, RoutedEventArgs e)

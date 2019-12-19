@@ -21,14 +21,16 @@ namespace NoteApplicationGUI
         UserManager userManager = new UserManager();
         NoteManager noteManager = new NoteManager();
         public User _user;
-        public List<Note> _notes;
+        public List<NoteHaphazardIdeas> _ideaNotes;
+        public List<NoteToDoList> _listNotes;
         public event Action<Window> userClosedWindow;
         public Note noteToView;
-        public ViewRecordsWindow(User user, List<Note> notes)
+        public ViewRecordsWindow(User user, List<NoteHaphazardIdeas> ideaNotes, List<NoteToDoList> listNotes)
         {
             InitializeComponent();
             _user = user;
-            _notes = notes;
+            _ideaNotes = ideaNotes;
+            _listNotes = listNotes;
             noteToView = null;
         }
 
