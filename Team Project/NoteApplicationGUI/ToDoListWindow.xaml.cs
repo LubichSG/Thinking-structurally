@@ -77,7 +77,8 @@ namespace NoteApplicationGUI
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-
+            noteManager.DeleteNote(_note.Id);
+            userClosedWindow?.Invoke(this);
         }
     }
 }

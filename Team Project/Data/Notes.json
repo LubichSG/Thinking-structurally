@@ -16,21 +16,6 @@
       "UserId": 1
     },
     {
-      "Content": "Получить 10!!!",
-      "Headline": "Программирование",
-      "Id": 27,
-      "Date": "2019-12-20T20:18:28.6065957+03:00",
-      "User": {
-        "Id": 1,
-        "Name": "Elliot",
-        "Surname": "Alderson",
-        "Phone": "+79102338080",
-        "Login": "+79102338080",
-        "Password": "xMpCOKC5I4INzFCab3WEmw=="
-      },
-      "UserId": 1
-    },
-    {
       "Content": "Все отлично работает!",
       "Headline": "Проверка",
       "Id": 27,

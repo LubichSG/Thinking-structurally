@@ -98,6 +98,21 @@ namespace Team_Project
             return note;
         }
 
+
+        public void DeleteNote(int noteId)
+        {
+            try
+            {
+                notesHaphazard.Remove(notesHaphazard.First(n => n.Id == noteId));
+            }
+            catch
+            {
+                notesToDo.Remove(notesToDo.First(n => n.Id == noteId));
+            }
+
+            SaveData();
+        }
+
         public List<NoteHaphazardIdeas> FindAllUserIdeaNotes(int userId)
         {
             List<NoteHaphazardIdeas> notes = new List<NoteHaphazardIdeas>();

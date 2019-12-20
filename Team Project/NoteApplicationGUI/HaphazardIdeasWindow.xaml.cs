@@ -47,12 +47,16 @@ namespace NoteApplicationGUI
                 {
                 MessageBox.Show("Do you want to save the record?");
                 }
-            else { userClosedWindow?.Invoke(this); }
+            else 
+            { 
+                userClosedWindow?.Invoke(this); 
+            }
         }
 
         
         private void SaveButton_Click(object sender, RoutedEventArgs e)
-        { if(!String.IsNullOrEmpty(RecordTextBox.Text) && !String.IsNullOrEmpty(HeadlineBox.Text))
+        { 
+            if(!String.IsNullOrEmpty(RecordTextBox.Text) && !String.IsNullOrEmpty(HeadlineBox.Text))
             {
                 if (_note?.Id == null)
                 {
@@ -74,7 +78,8 @@ namespace NoteApplicationGUI
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-
+            noteManager.DeleteNote(_note.Id);
+            userClosedWindow?.Invoke(this);
         }
     }
 }

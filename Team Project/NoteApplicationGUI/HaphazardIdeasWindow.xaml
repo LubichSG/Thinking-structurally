@@ -58,8 +58,8 @@
         </Button>
         <Button Name ="DeleteButton" Click="DeleteButton_Click" Background="SeaShell"
                 Grid.Row="5" Height="40" Width="120"
-                VerticalAlignment="Center" HorizontalAlignment="Left"
-                FontSize="20" FontFamily="Comic Sans MS" Grid.ColumnSpan="2" Margin="210,0,0,0" Grid.Column="1">
+                VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 125 0"
+                FontSize="20" FontFamily="Comic Sans MS" Grid.ColumnSpan="2" Grid.Column="1">
             Delete
         </Button>
 

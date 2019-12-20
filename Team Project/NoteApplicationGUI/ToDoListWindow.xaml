@@ -106,8 +106,8 @@
 
         <Button Name ="DeleteButton" Click="DeleteButton_Click" Background="SeaShell"
                 Grid.Row="2" Height="40" Width="120"
-                VerticalAlignment="Top" HorizontalAlignment="Left"
-                FontSize="20" FontFamily="Comic Sans MS" Margin="333,4,0,0">
+                VerticalAlignment="Top" HorizontalAlignment="Center"
+                FontSize="20" FontFamily="Comic Sans MS">
             Delete
         </Button>
     </Grid>
