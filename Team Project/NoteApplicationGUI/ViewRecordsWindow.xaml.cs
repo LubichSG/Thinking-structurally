@@ -79,6 +79,9 @@ namespace NoteApplicationGUI
         private void SeeThisWindowAgain(Window window)
         {
             noteManager = new NoteManager();
+            ViewContent.Content = null;
+            _ideaNotes = noteManager.FindAllUserIdeaNotes(_user.Id);
+            _listNotes = noteManager.FindAllUserListNotes(_user.Id);
             this.Show();
             window.Close();
         }

@@ -1,10 +1,18 @@
-﻿[
+[
   {
     "Id": 1,
     "Name": "Elliot",
     "Surname": "Alderson",
     "Phone": "+79102338080",
-	"Login": "+79102338080",
+    "Login": "+79102338080",
+    "Password": "xMpCOKC5I4INzFCab3WEmw=="
+  },
+  {
+    "Id": 2,
+    "Name": "sofia",
+    "Surname": "lubich",
+    "Phone": "+79616284359",
+    "Login": "+79616284359",
     "Password": "xMpCOKC5I4INzFCab3WEmw=="
   }
 ]

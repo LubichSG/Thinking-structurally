@@ -16,19 +16,34 @@
       "UserId": 1
     },
     {
-      "Content": "Все отлично работает!",
-      "Headline": "Проверка",
-      "Id": 27,
-      "Date": "2019-12-20T19:56:31.6696308+03:00",
+      "Content": "2",
+      "Headline": "2",
+      "Id": 29,
+      "Date": "2019-12-20T23:44:07.9773999+03:00",
       "User": {
-        "Id": 1,
-        "Name": "Elliot",
-        "Surname": "Alderson",
-        "Phone": "+79102338080",
-        "Login": "+79102338080",
+        "Id": 2,
+        "Name": "sofia",
+        "Surname": "lubich",
+        "Phone": "+79616284359",
+        "Login": "+79616284359",
         "Password": "xMpCOKC5I4INzFCab3WEmw=="
       },
-      "UserId": 1
+      "UserId": 2
+    },
+    {
+      "Content": "33",
+      "Headline": "33",
+      "Id": 30,
+      "Date": "2019-12-20T23:50:05.8103812+03:00",
+      "User": {
+        "Id": 2,
+        "Name": "sofia",
+        "Surname": "lubich",
+        "Phone": "+79616284359",
+        "Login": "+79616284359",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 2
     }
   ],
   "NotesToDo": [
@@ -80,40 +95,6 @@
       "Headline": "Список покупок",
       "Id": 26,
       "Date": "2019-12-20T20:15:38.9247118+03:00",
-      "User": {
-        "Id": 1,
-        "Name": "Elliot",
-        "Surname": "Alderson",
-        "Phone": "+79102338080",
-        "Login": "+79102338080",
-        "Password": "xMpCOKC5I4INzFCab3WEmw=="
-      },
-      "UserId": 1
-    },
-    {
-      "Notes": [
-        {
-          "Number": 0,
-          "EventDate": "0001-01-01T00:00:00",
-          "Task": "сосиски",
-          "Finished": false
-        },
-        {
-          "Number": 0,
-          "EventDate": "0001-01-01T00:00:00",
-          "Task": "сметана",
-          "Finished": false
-        },
-        {
-          "Number": 0,
-          "EventDate": "0001-01-01T00:00:00",
-          "Task": "пицца",
-          "Finished": false
-        }
-      ],
-      "Headline": "Список покупок2!",
-      "Id": 27,
-      "Date": "2019-12-20T20:07:16.652531+03:00",
       "User": {
         "Id": 1,
         "Name": "Elliot",

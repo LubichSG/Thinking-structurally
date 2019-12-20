@@ -39,6 +39,7 @@ namespace NoteApplicationGUI
             var listNotes = noteManager.FindAllUserListNotes(_user.Id);
             ViewRecordsWindow viewWindow = new ViewRecordsWindow(_user, ideaNotes, listNotes);
             viewWindow.userClosedWindow += SeeThisWindowAgain;
+
             viewWindow.Show();
             this.Hide();
         }
@@ -58,6 +59,7 @@ namespace NoteApplicationGUI
 
         private void SeeThisWindowAgain(Window window)
         {
+            noteManager = new NoteManager();
             this.Show();
             window.Close();
         }

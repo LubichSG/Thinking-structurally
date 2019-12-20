@@ -80,6 +80,12 @@ namespace NoteApplicationGUI
         {
             noteManager.DeleteNote(_note.Id);
             userClosedWindow?.Invoke(this);
+            //noteManager.DeleteNote(_note.Id);
+            //var ideaNotes = noteManager.FindAllUserIdeaNotes(_user.Id);
+            //var listNotes = noteManager.FindAllUserListNotes(_user.Id);
+            //ViewRecordsWindow viewWindow = new ViewRecordsWindow(_user, ideaNotes, listNotes);
+            //viewWindow.Show();
+            //this.Close();
         }
     }
 }

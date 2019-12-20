@@ -51,19 +51,43 @@ namespace Team_Project
             LoadData();
         }
 
-        public NoteHaphazardIdeas SaveNoteHaphazardIdeas(int id, string headline, DateTime date, string content, int userId)
+
+        //void DeleteData()
+        //{
+        //    var data = new NotesData
+        //    {
+        //        NotesHaphazard = null,
+        //        NotesToDo = null
+        //    };
+          
+        //    Serialize(NotesFileName, data);
+        //    LoadData();
+        //}
+
+
+        public NoteHaphazardIdeas RemoveNoteHaphazardIdeas(int id, string headline, DateTime date, string content, int userId)
+        {
+            NoteHaphazardIdeas note;
+            var user = users.FirstOrDefault(u => u.Id == userId);
+            //notes.AddRange(notesHaphazard.Where(n => n.UserId == userId).ToList());
+            note = new NoteHaphazardIdeas(headline, id, date, content, user, userId);
+            notesHaphazard.Remove(note);
+            SaveData();
+            return note;
+        }
+    public NoteHaphazardIdeas SaveNoteHaphazardIdeas(int id, string headline, DateTime date, string content, int userId)
         {
             NoteHaphazardIdeas note;
             if (id == 0)
             {
-                id = notesToDo.Count > 0 ? notesToDo.Max(n => n.Id) + 1 : 1;
+                id = notesHaphazard.Count > 0 ? notesHaphazard.Max(n => n.Id) + 1 : 1;
                 var user = users.FirstOrDefault(u => u.Id == userId);
                 note = new NoteHaphazardIdeas(headline, id, date, content, user, userId);
                 notesHaphazard.Add(note);
             }
             else
             {
-                
+
                 int index = notesHaphazard.FindIndex(u => u.Id == id);
                 notesHaphazard[index].Content = content;
                 notesHaphazard[index].Headline = headline;
@@ -74,6 +98,19 @@ namespace Team_Project
             return note;
         }
 
+        public void DeleteNote(int noteId)
+        {
+            try
+            {
+                notesHaphazard.Remove(notesHaphazard.First(n => n.Id == noteId));
+            }
+            catch
+            {
+                notesToDo.Remove(notesToDo.First(n => n.Id == noteId));
+            }
+
+            SaveData();
+        }
 
         public NoteToDoList SaveNoteToDoList(string headline, int id, DateTime date, List<ContentToDo> notes, int userId)
         {
@@ -96,21 +133,6 @@ namespace Team_Project
 
             SaveData();
             return note;
-        }
-
-
-        public void DeleteNote(int noteId)
-        {
-            try
-            {
-                notesHaphazard.Remove(notesHaphazard.First(n => n.Id == noteId));
-            }
-            catch
-            {
-                notesToDo.Remove(notesToDo.First(n => n.Id == noteId));
-            }
-
-            SaveData();
         }
 
         public List<NoteHaphazardIdeas> FindAllUserIdeaNotes(int userId)
