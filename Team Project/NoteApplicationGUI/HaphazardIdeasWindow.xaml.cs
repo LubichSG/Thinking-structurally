@@ -21,19 +21,20 @@ namespace NoteApplicationGUI
         UserManager userManager = new UserManager();
         NoteManager noteManager = new NoteManager();
         public User _user;
-        public int count;
         public int id;
-        
-      
+        public NoteHaphazardIdeas _note;
+
+
         public event Action<Window> userClosedWindow;
 
         public HaphazardIdeasWindow(User user, NoteHaphazardIdeas note)
         {
             InitializeComponent();
-            _user = user;  
-            count = 0;
-            if(note != null)
+            _user = user;
+            _note = note;
+            if (note != null)
             {
+
                 HeadlineBox.Text = note.Headline;
                 RecordTextBox.Text = note.Content;
             }
@@ -41,9 +42,10 @@ namespace NoteApplicationGUI
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(RecordTextBox.Text) && !String.IsNullOrEmpty(HeadlineBox.Text) && (count == 0))
+            if (_note?.Id == null && !String.IsNullOrEmpty(RecordTextBox.Text) && !String.IsNullOrEmpty(HeadlineBox.Text) || _note?.Id>0 && (_note.Headline != HeadlineBox.Text || _note.Content != RecordTextBox.Text) && !String.IsNullOrEmpty(HeadlineBox.Text))
+
                 {
-                MessageBox.Show("Do not want to save the record?");
+                MessageBox.Show("Do you want to save the record?");
                 }
             else { userClosedWindow?.Invoke(this); }
         }
@@ -52,19 +54,18 @@ namespace NoteApplicationGUI
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         { if(!String.IsNullOrEmpty(RecordTextBox.Text) && !String.IsNullOrEmpty(HeadlineBox.Text))
             {
-                if (count == 0)
+                if (_note?.Id == null)
                 {
                     if (noteManager.UniqueHeadline(HeadlineBox.Text))
                     {
-                        id = noteManager.SaveNoteHaphazardIdeas(0, HeadlineBox.Text, DateTime.Now, RecordTextBox.Text, _user.Id);
-                        count++;
+                        _note = noteManager.SaveNoteHaphazardIdeas(0, HeadlineBox.Text, DateTime.Now, RecordTextBox.Text, _user.Id);
                     }
                     else { MessageBox.Show("Headline is not unique!"); }
                 }
                 else
                 {
                     
-                    noteManager.SaveNoteHaphazardIdeas(id, HeadlineBox.Text, DateTime.Now, RecordTextBox.Text, _user.Id);
+                    _note = noteManager.SaveNoteHaphazardIdeas(_note.Id, HeadlineBox.Text, DateTime.Now, RecordTextBox.Text, _user.Id);
                     //DialogResult = true;
                    
                     

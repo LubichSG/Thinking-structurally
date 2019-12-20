@@ -35,8 +35,8 @@ namespace NoteApplicationGUI
         }
         private void ViewNotesButton_Click(object sender, RoutedEventArgs e)
         {
-            var ideaNotes = noteManager.FindAllUserIdeaNotes(_user);
-            var listNotes = noteManager.FindAllUserListNotes(_user);
+            var ideaNotes = noteManager.FindAllUserIdeaNotes(_user.Id);
+            var listNotes = noteManager.FindAllUserListNotes(_user.Id);
             ViewRecordsWindow viewWindow = new ViewRecordsWindow(_user, ideaNotes, listNotes);
             viewWindow.userClosedWindow += SeeThisWindowAgain;
             viewWindow.Show();

@@ -22,10 +22,10 @@ namespace NoteApplicationGUI
         UserManager userManager = new UserManager();
         NoteManager noteManager = new NoteManager();
         public User _user;
-        public int count;
         public int id;
+        public NoteToDoList _note;
 
-        
+
         public event Action<Window> userClosedWindow;
         List<ContentToDo> notes = new List<ContentToDo>(); //new
         public ToDoListWindow(User user, NoteToDoList note)
@@ -34,7 +34,6 @@ namespace NoteApplicationGUI
             InitializeComponent();
             ToDoListDataGrid.ItemsSource = notes;//new
             _user = user;
-            count = 0;
             if (note != null)
             {
                 HeadlineBox.Text = note.Headline;
@@ -43,8 +42,9 @@ namespace NoteApplicationGUI
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            
-            if (!String.IsNullOrEmpty(HeadlineBox.Text) && (count == 0) && (notes != null))
+
+            if (_note?.Id == null && notes != null && !String.IsNullOrEmpty(HeadlineBox.Text) || _note?.Id > 0 && (_note.Headline != HeadlineBox.Text || 
+                _note.Notes != notes) && !String.IsNullOrEmpty(HeadlineBox.Text))
             {
                 MessageBox.Show("Do not want to save the record?");
             }
@@ -55,19 +55,18 @@ namespace NoteApplicationGUI
         {
             if (!String.IsNullOrEmpty(HeadlineBox.Text) && (notes != null))
             {
-                if (count == 0)
+                if (_note?.Id == null)
                 {
                     if (noteManager.UniqueHeadline(HeadlineBox.Text))
                     {
-                        id = noteManager.SaveNoteToDoList(HeadlineBox.Text, 0, DateTime.Now, notes, _user.Id);
-                        count++;
+                        _note = noteManager.SaveNoteToDoList(HeadlineBox.Text, 0, DateTime.Now, notes, _user.Id);
                     }
                     else { MessageBox.Show("Headline is not unique!"); }
                 }
                 else
                 {
 
-                    noteManager.SaveNoteToDoList(HeadlineBox.Text, id, DateTime.Now, notes, _user.Id);
+                    _note=noteManager.SaveNoteToDoList(HeadlineBox.Text, _note.Id, DateTime.Now, notes, _user.Id);
                     //DialogResult = true;
 
 

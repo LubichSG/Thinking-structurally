@@ -48,76 +48,81 @@ namespace Team_Project
                 NotesToDo = notesToDo
             };
             Serialize(NotesFileName, data);
+            LoadData();
         }
 
-        public int SaveNoteHaphazardIdeas(int id, string headline, DateTime date, string content, int userId)
+        public NoteHaphazardIdeas SaveNoteHaphazardIdeas(int id, string headline, DateTime date, string content, int userId)
         {
-
+            NoteHaphazardIdeas note;
             if (id == 0)
             {
                 id = notesToDo.Count > 0 ? notesToDo.Max(n => n.Id) + 1 : 1;
                 var user = users.FirstOrDefault(u => u.Id == userId);
-                var noteHaphazard = new NoteHaphazardIdeas(headline, id, date, content, user, userId);
-                notesHaphazard.Add(noteHaphazard);
+                note = new NoteHaphazardIdeas(headline, id, date, content, user, userId);
+                notesHaphazard.Add(note);
             }
             else
             {
-                var note = notesHaphazard.FirstOrDefault(u => u.Id == id);
-                note.Content = content;
-                note.Headline = headline;
-                note.Date = date;
+                
+                int index = notesHaphazard.FindIndex(u => u.Id == id);
+                notesHaphazard[index].Content = content;
+                notesHaphazard[index].Headline = headline;
+                notesHaphazard[index].Date = date;
+                note = notesHaphazard[index];
             }
             SaveData();
-            return id;
+            return note;
         }
 
 
-        public int SaveNoteToDoList(string headline, int id, DateTime date, List<ContentToDo> notes, int userId)
+        public NoteToDoList SaveNoteToDoList(string headline, int id, DateTime date, List<ContentToDo> notes, int userId)
         {
+            NoteToDoList note;
             if (id == 0)
             {
                 id = notesToDo.Count > 0 ? notesToDo.Max(n => n.Id) + 1 : 1;
                 var user = users.FirstOrDefault(u => u.Id == userId);
-                var noteToDo = new NoteToDoList(headline, id, date, notes, user, userId);
-                notesToDo.Add(noteToDo);
+                note = new NoteToDoList(headline, id, date, notes, user, userId);
+                notesToDo.Add(note);
             }
             else
             {
-                var note = notesToDo.FirstOrDefault(u => u.Id == id);
-                note.Notes = notes;
-                note.Headline = headline;
-                note.Date = DateTime.Now;
+                int index = notesToDo.FindIndex(u => u.Id == id);
+                notesToDo[index].Notes = notes;
+                notesToDo[index].Headline = headline;
+                notesToDo[index].Date = date;
+                note = notesToDo[index];
             }
 
             SaveData();
-            return id;
+            return note;
         }
 
-        public List<NoteHaphazardIdeas> FindAllUserIdeaNotes(User user)
+        public List<NoteHaphazardIdeas> FindAllUserIdeaNotes(int userId)
         {
             List<NoteHaphazardIdeas> notes = new List<NoteHaphazardIdeas>();
-            notes.AddRange(notesHaphazard.Where(n => n.User == user).ToList());
+            notes.AddRange(notesHaphazard.Where(n => n.UserId == userId).ToList());
             var sortedNotes = from n in notes
                               orderby n.Date descending
                               select n;
             return sortedNotes.ToList();
         }
 
-        public List<NoteToDoList> FindAllUserListNotes(User user)
+        public List<NoteToDoList> FindAllUserListNotes(int userId)
         {
             List<NoteToDoList> notes = new List<NoteToDoList>();
-            notes.AddRange(notesToDo.Where(n => n.User == user).ToList());
+            notes.AddRange(notesToDo.Where(n => n.UserId == userId).ToList());
             var sortedNotes = from n in notes
                               orderby n.Date descending
                               select n;
             return sortedNotes.ToList();
         }
 
-        public Note FindNoteByUserAndHeadline(User user, string headline)
+        public Note FindNoteByUserAndHeadline(int userId, string headline)
         {
             List<Note> notes = new List<Note>();
-            notes.AddRange(notesHaphazard.Where(n => n.User == user).ToList());
-            notes.AddRange(notesToDo.Where(n => n.User == user).ToList());
+            notes.AddRange(notesHaphazard.Where(n => n.UserId == userId).ToList());
+            notes.AddRange(notesToDo.Where(n => n.UserId == userId).ToList());
             return notes.First(n => n.Headline == headline);
         }
 

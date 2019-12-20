@@ -61,12 +61,13 @@ namespace NoteApplicationGUI
 
         public void ShowNote(User user, string headline)
         {
-            var noteToView = noteManager.FindNoteByUserAndHeadline(user, headline);
+            var noteToView = noteManager.FindNoteByUserAndHeadline(user.Id, headline);
             try
             {
                 var newNoteToView = noteToView as NoteHaphazardIdeas;
                 HaphazardIdeasWindow ideasWindow = new HaphazardIdeasWindow(user, newNoteToView);
                 ideasWindow.userClosedWindow += SeeThisWindowAgain;
+               
                 ideasWindow.Show();
                 this.Hide();
             }
@@ -94,6 +95,7 @@ namespace NoteApplicationGUI
 
         private void SeeThisWindowAgain(Window window)
         {
+            noteManager = new NoteManager();
             this.Show();
             window.Close();
         }
