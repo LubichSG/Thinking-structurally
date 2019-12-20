@@ -33,7 +33,8 @@ namespace NoteApplicationGUI
             InitializeComponent();
             ToDoListDataGrid.ItemsSource = notes;
             _user = user;
-            if (note != null)
+            _note = note;
+            if (_note != null)
             {
                 HeadlineBox.Text = note.Headline;
                 ToDoListDataGrid.ItemsSource = note.Notes;
@@ -45,8 +46,9 @@ namespace NoteApplicationGUI
 
             if (_note?.Id == null && notes != null && !String.IsNullOrEmpty(HeadlineBox.Text) || _note?.Id > 0 && (_note.Headline != HeadlineBox.Text || 
                 _note.Notes != notes) && !String.IsNullOrEmpty(HeadlineBox.Text))
+
             {
-                MessageBox.Show("Do not want to save the record?");
+                MessageBox.Show("Do you want to save the record?");
             }
             else { userClosedWindow?.Invoke(this); }
         }

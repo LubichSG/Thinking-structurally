@@ -1,25 +1,10 @@
 {
   "NotesHaphazard": [
     {
-      "Content": "Работает? да. Ура!!!!",
+      "Content": "Работает? да. Ура!!!! ЕЕЕЕ",
       "Headline": "хочу домой",
       "Id": 1,
-      "Date": "2019-12-20T11:41:06.0495358+03:00",
-      "User": {
-        "Id": 1,
-        "Name": "Elliot",
-        "Surname": "Alderson",
-        "Phone": "+79102338080",
-        "Login": "+79102338080",
-        "Password": "xMpCOKC5I4INzFCab3WEmw=="
-      },
-      "UserId": 1
-    },
-    {
-      "Content": "123456",
-      "Headline": "Что-то пошло не так",
-      "Id": 2,
-      "Date": "2019-12-20T15:57:21.1078151+03:00",
+      "Date": "2019-12-20T16:01:59.6712899+03:00",
       "User": {
         "Id": 1,
         "Name": "Elliot",
@@ -35,6 +20,36 @@
       "Headline": "hoooray",
       "Id": 3,
       "Date": "2019-12-19T20:47:02.272567+03:00",
+      "User": {
+        "Id": 1,
+        "Name": "Elliot",
+        "Surname": "Alderson",
+        "Phone": "+79102338080",
+        "Login": "+79102338080",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 1
+    },
+    {
+      "Content": "Получить 10!!!",
+      "Headline": "Программирование",
+      "Id": 27,
+      "Date": "2019-12-20T19:55:02.5897985+03:00",
+      "User": {
+        "Id": 1,
+        "Name": "Elliot",
+        "Surname": "Alderson",
+        "Phone": "+79102338080",
+        "Login": "+79102338080",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 1
+    },
+    {
+      "Content": "Все отлично работает!",
+      "Headline": "Проверка",
+      "Id": 27,
+      "Date": "2019-12-20T19:56:31.6696308+03:00",
       "User": {
         "Id": 1,
         "Name": "Elliot",
@@ -65,6 +80,55 @@
       "Headline": "ура дедлайн продлили!!",
       "Id": 22,
       "Date": "2019-12-19T20:14:21.948118+03:00",
+      "User": {
+        "Id": 1,
+        "Name": "Elliot",
+        "Surname": "Alderson",
+        "Phone": "+79102338080",
+        "Login": "+79102338080",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 1
+    },
+    {
+      "Notes": [],
+      "Headline": "Proga",
+      "Id": 25,
+      "Date": "2019-12-20T19:45:38.2989754+03:00",
+      "User": {
+        "Id": 1,
+        "Name": "Elliot",
+        "Surname": "Alderson",
+        "Phone": "+79102338080",
+        "Login": "+79102338080",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 1
+    },
+    {
+      "Notes": [
+        {
+          "Number": 0,
+          "EventDate": "0001-01-01T00:00:00",
+          "Task": "Хлеб",
+          "Finished": false
+        },
+        {
+          "Number": 1,
+          "EventDate": "0001-01-01T00:00:00",
+          "Task": "Молоко",
+          "Finished": false
+        },
+        {
+          "Number": 2,
+          "EventDate": "0001-01-01T00:00:00",
+          "Task": "Торт",
+          "Finished": false
+        }
+      ],
+      "Headline": "Список покупок",
+      "Id": 26,
+      "Date": "2019-12-20T19:47:57.3880172+03:00",
       "User": {
         "Id": 1,
         "Name": "Elliot",

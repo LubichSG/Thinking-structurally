@@ -66,9 +66,6 @@ namespace NoteApplicationGUI
                 {
                     
                     _note = noteManager.SaveNoteHaphazardIdeas(_note.Id, HeadlineBox.Text, DateTime.Now, RecordTextBox.Text, _user.Id);
-                    //DialogResult = true;
-                   
-                    
                 }
             }
         else { MessageBox.Show("Headline and text box must be filled!"); }
