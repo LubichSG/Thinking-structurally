@@ -75,6 +75,9 @@ namespace NoteApplicationGUI
 
         }
 
-          
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

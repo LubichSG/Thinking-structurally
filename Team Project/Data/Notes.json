@@ -16,25 +16,10 @@
       "UserId": 1
     },
     {
-      "Content": "save me ",
-      "Headline": "hoooray",
-      "Id": 3,
-      "Date": "2019-12-19T20:47:02.272567+03:00",
-      "User": {
-        "Id": 1,
-        "Name": "Elliot",
-        "Surname": "Alderson",
-        "Phone": "+79102338080",
-        "Login": "+79102338080",
-        "Password": "xMpCOKC5I4INzFCab3WEmw=="
-      },
-      "UserId": 1
-    },
-    {
       "Content": "Получить 10!!!",
       "Headline": "Программирование",
       "Id": 27,
-      "Date": "2019-12-20T19:55:02.5897985+03:00",
+      "Date": "2019-12-20T20:18:28.6065957+03:00",
       "User": {
         "Id": 1,
         "Name": "Elliot",
@@ -106,29 +91,44 @@
       "UserId": 1
     },
     {
+      "Notes": [],
+      "Headline": "Список покупок",
+      "Id": 26,
+      "Date": "2019-12-20T20:15:38.9247118+03:00",
+      "User": {
+        "Id": 1,
+        "Name": "Elliot",
+        "Surname": "Alderson",
+        "Phone": "+79102338080",
+        "Login": "+79102338080",
+        "Password": "xMpCOKC5I4INzFCab3WEmw=="
+      },
+      "UserId": 1
+    },
+    {
       "Notes": [
         {
           "Number": 0,
           "EventDate": "0001-01-01T00:00:00",
-          "Task": "Хлеб",
+          "Task": "сосиски",
           "Finished": false
         },
         {
-          "Number": 1,
+          "Number": 0,
           "EventDate": "0001-01-01T00:00:00",
-          "Task": "Молоко",
+          "Task": "сметана",
           "Finished": false
         },
         {
-          "Number": 2,
+          "Number": 0,
           "EventDate": "0001-01-01T00:00:00",
-          "Task": "Торт",
+          "Task": "пицца",
           "Finished": false
         }
       ],
-      "Headline": "Список покупок",
-      "Id": 26,
-      "Date": "2019-12-20T19:47:57.3880172+03:00",
+      "Headline": "Список покупок2!",
+      "Id": 27,
+      "Date": "2019-12-20T20:07:16.652531+03:00",
       "User": {
         "Id": 1,
         "Name": "Elliot",

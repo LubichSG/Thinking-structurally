@@ -71,5 +71,10 @@ namespace NoteApplicationGUI
         else { MessageBox.Show("Headline and text box must be filled!"); }
 
         }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

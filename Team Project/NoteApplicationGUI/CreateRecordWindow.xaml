@@ -12,7 +12,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition/>
+            
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -32,11 +32,7 @@
                 Width="342" Height="50" FontFamily="Comic Sans MS" FontSize="20">
             Haphazard ideas
         </Button>
-        <Button Name="ViewSampleTemplatesButton"  Click="ViewSampleTemplatesButton_Click" Background="SeaShell"
-                VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3"
-                Width="342" Height="50" FontFamily="Comic Sans MS" FontSize="20">
-            View sample templates
-        </Button>
+       
 
         <Button Name="BackButton"  Click="BackButton_Click" Background="SeaShell"
                 VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4"

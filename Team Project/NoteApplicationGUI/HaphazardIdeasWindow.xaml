@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NoteApplicationGUI"
         mc:Ignorable="d"
-        Title="HaphazardIdeasWindow" Height="450" Width="800">  
+        Title="HaphazardIdeasWindow" Height="450" Width="800">
     <Window.Background>
         <ImageBrush ImageSource="Resources/Pastel.jpg" Stretch="Fill"></ImageBrush>
     </Window.Background>
@@ -19,41 +19,48 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="100*"/>
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Row="0" Grid.ColumnSpan="2"
-                   VerticalAlignment="Top" HorizontalAlignment="Left" Margin="345,14,0,0"
-                   FontSize="20" FontFamily="Comic Sans MS">
+                   VerticalAlignment="Top" HorizontalAlignment="Left" Margin="221,14,0,0"
+                   FontSize="20" FontFamily="Comic Sans MS" Grid.Column="1">
             New record
         </TextBlock>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="1" HorizontalAlignment="Left" Margin="80,50,0,67"
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="80,50,0,65"
                    FontSize="20" FontFamily="Comic Sans MS" Grid.RowSpan="2" Height="30">
             Headline:
         </TextBlock>
 
-        <TextBox Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="178,50,0,0" Background="SeaShell"
+        <TextBox Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="54,50,0,0" Background="SeaShell"
                  FontSize="20" FontFamily="Comic Sans MS" Width="542" RenderTransformOrigin="1.379,1.042" 
                  Height="30" VerticalAlignment="Top" Grid.RowSpan="2" 
-                 Name="HeadlineBox">
+                 Name="HeadlineBox" Grid.Column="1">
 
         </TextBox>
         <TextBox Grid.Column="0" Height="270" Width="640"
-                 VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0"
+                 VerticalAlignment="Top" HorizontalAlignment="Left" Margin="80,20,0,0"
                  FontSize="18" FontFamily="Comic Sans MS"
-                 Name="RecordTextBox" Grid.ColumnSpan="2" Grid.RowSpan="5" Background="SeaShell" Grid.Row="1"/>
+                 Name="RecordTextBox" Grid.ColumnSpan="3" Grid.RowSpan="5" Background="SeaShell" Grid.Row="1"/>
         <Button Name ="SaveButton" Click="SaveButton_Click" Background="SeaShell"
-                Grid.Row="5" Grid.Column="1" Height="40" Width="120"
+                Grid.Row="5" Grid.Column="2" Height="40" Width="120"
                 VerticalAlignment="Center" HorizontalAlignment="Center"
                 FontSize="20" FontFamily="Comic Sans MS">
             Save
         </Button>
         <Button Name ="BackButton" Click="BackButton_Click" Background="SeaShell"
                 Grid.Row="5" Height="40" Width="120"
-                VerticalAlignment="Center" HorizontalAlignment="Center"
-                FontSize="20" FontFamily="Comic Sans MS">
+                VerticalAlignment="Center" HorizontalAlignment="Left"
+                FontSize="20" FontFamily="Comic Sans MS" Grid.Column="1" Margin="16,0,0,0">
             Back
+        </Button>
+        <Button Name ="DeleteButton" Click="DeleteButton_Click" Background="SeaShell"
+                Grid.Row="5" Height="40" Width="120"
+                VerticalAlignment="Center" HorizontalAlignment="Left"
+                FontSize="20" FontFamily="Comic Sans MS" Grid.ColumnSpan="2" Margin="210,0,0,0" Grid.Column="1">
+            Delete
         </Button>
 
     </Grid>

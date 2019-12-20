@@ -50,10 +50,7 @@ namespace NoteApplicationGUI
             this.Hide();
         }
 
-        private void ViewSampleTemplatesButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
 
         private void SeeThisWindowAgain(Window window)
         {
