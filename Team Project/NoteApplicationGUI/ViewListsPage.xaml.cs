@@ -50,27 +50,27 @@ namespace NoteApplicationGUI
 
         private void Note1_Click(object sender, RoutedEventArgs e)
         {
-            _window.ShowNote(_user, Note1.Content.ToString());
+            _window.ShowListNote(_user, Note1.Content.ToString());
         }
 
         private void Note2_Click(object sender, RoutedEventArgs e)
         {
-            _window.ShowNote(_user, Note2.Content.ToString());
+            _window.ShowListNote(_user, Note2.Content.ToString());
         }
 
         private void Note3_Click(object sender, RoutedEventArgs e)
         {
-            _window.ShowNote(_user, Note3.Content.ToString());
+            _window.ShowListNote(_user, Note3.Content.ToString());
         }
 
         private void Note4_Click(object sender, RoutedEventArgs e)
         {
-            _window.ShowNote(_user, Note4.Content.ToString());
+            _window.ShowListNote(_user, Note4.Content.ToString());
         }
 
         private void Note5_Click(object sender, RoutedEventArgs e)
         {
-            _window.ShowNote(_user, Note5.Content.ToString());
+            _window.ShowListNote(_user, Note5.Content.ToString());
         }
 
         private void NameButtons(Button button, Note note)

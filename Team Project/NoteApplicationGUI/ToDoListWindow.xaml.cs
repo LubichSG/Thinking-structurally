@@ -27,16 +27,16 @@ namespace NoteApplicationGUI
 
 
         public event Action<Window> userClosedWindow;
-        List<ContentToDo> notes = new List<ContentToDo>(); //new
+        List<ContentToDo> notes = new List<ContentToDo>(); 
         public ToDoListWindow(User user, NoteToDoList note)
-        //List<NoteToDoList> notes = new List<NoteToDoList>();
         {
             InitializeComponent();
-            ToDoListDataGrid.ItemsSource = notes;//new
+            ToDoListDataGrid.ItemsSource = notes;
             _user = user;
             if (note != null)
             {
                 HeadlineBox.Text = note.Headline;
+                ToDoListDataGrid.ItemsSource = note.Notes;
             }
         }
 
@@ -67,9 +67,6 @@ namespace NoteApplicationGUI
                 {
 
                     _note=noteManager.SaveNoteToDoList(HeadlineBox.Text, _note.Id, DateTime.Now, notes, _user.Id);
-                    //DialogResult = true;
-
-
                 }
             }
             else { MessageBox.Show("Headline and text box must be filled!"); }

@@ -54,26 +54,25 @@ namespace NoteApplicationGUI
             this.Hide();
         }
 
-        public void ShowNote(User user, string headline)
+        public void ShowIdeaNote(User user, string headline)
         {
             var noteToView = noteManager.FindNoteByUserAndHeadline(user.Id, headline);
-            try
-            {
-                var newNoteToView = noteToView as NoteHaphazardIdeas;
-                HaphazardIdeasWindow ideasWindow = new HaphazardIdeasWindow(user, newNoteToView);
-                ideasWindow.userClosedWindow += SeeThisWindowAgain;
-               
-                ideasWindow.Show();
-                this.Hide();
-            }
-            catch
-            {
-                var newNoteToView = noteToView as NoteToDoList;
-                ToDoListWindow listWindow = new ToDoListWindow(user, newNoteToView);
-                listWindow.userClosedWindow += SeeThisWindowAgain;
-                listWindow.Show();
-                this.Hide();
-            }
+            var newNoteToView = noteToView as NoteHaphazardIdeas;
+            HaphazardIdeasWindow ideasWindow = new HaphazardIdeasWindow(user, newNoteToView);
+            ideasWindow.userClosedWindow += SeeThisWindowAgain;
+            ideasWindow.Show();
+            this.Hide();
+        }
+
+
+        public void ShowListNote(User user, string headline)
+        {
+            var noteToView = noteManager.FindNoteByUserAndHeadline(user.Id, headline);
+            var newNoteToView = noteToView as NoteToDoList;
+            ToDoListWindow listWindow = new ToDoListWindow(user, newNoteToView);
+            listWindow.userClosedWindow += SeeThisWindowAgain;
+            listWindow.Show();
+            this.Hide();
         }
 
 
