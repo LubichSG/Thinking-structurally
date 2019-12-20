@@ -48,7 +48,6 @@ namespace NoteApplicationGUI
             _window.AddHaphazardIdea();
         }
 
-        //проверка на лоха - нажатие на пустую кнопку не срабатывает!!
         private void Note1_Click(object sender, RoutedEventArgs e)
         {
             _window.ShowNote(_user, Note1.Content.ToString());

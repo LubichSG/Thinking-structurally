@@ -34,6 +34,13 @@ namespace NoteApplicationGUI
             {
                 NameButtons(buttons[i], _notes[i]);
             }
+            foreach (var button in buttons)
+            {
+                if (button.Content == null)
+                {
+                    button.Visibility = Visibility.Collapsed;
+                }
+            }
         }
 
         private void AddNote_Click(object sender, RoutedEventArgs e)

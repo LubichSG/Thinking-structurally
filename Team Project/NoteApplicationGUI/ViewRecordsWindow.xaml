@@ -53,25 +53,5 @@
                 FontSize="20" FontFamily="Comic Sans MS">
             Back
         </Button>
-        <!--<Button Name ="HaphazardIdeaButton" Click="HaphazardIdeaButton_Click"
-                Grid.Row="3" Grid.Column="0" Height="40" Width="170" Background="SeaShell"
-                VerticalAlignment="Center" HorizontalAlignment="Left" Margin="100 0 0 0"
-                FontSize="20" FontFamily="Comic Sans MS" Visibility="Hidden">
-            Haphazard idea
-        </Button>-->
-        <!--<Button Name ="ViewNote" Click="ViewNote_Click" Background="SeaShell"
-                Grid.Row="3" Grid.Column="0" Height="40" Width="100"
-                VerticalAlignment="Center" HorizontalAlignment="Center"
-                FontSize="20" FontFamily="Comic Sans MS" Visibility="Hidden">
-            View
-        </Button>-->
-        <!--<Button Name ="ToDoListButton" Click="ToDoListButton_Click" Background="SeaShell"
-                Grid.Row="3" Grid.Column="0" Height="40" Width="170"
-                VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 100 0"
-                FontSize="20" FontFamily="Comic Sans MS" Visibility="Hidden">
-            To-do list
-        </Button>-->
-        
-        
     </Grid>
 </Window>

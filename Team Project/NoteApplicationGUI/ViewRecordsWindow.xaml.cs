@@ -18,7 +18,6 @@ namespace NoteApplicationGUI
     /// </summary>
     public partial class ViewRecordsWindow : Window
     {
-        UserManager userManager = new UserManager();
         NoteManager noteManager = new NoteManager();
         public User _user;
         public List<NoteHaphazardIdeas> _ideaNotes;
@@ -44,8 +43,6 @@ namespace NoteApplicationGUI
             HaphazardIdeasWindow ideaWindow = new HaphazardIdeasWindow(_user, null);
             ideaWindow.userClosedWindow += SeeThisWindowAgain;
             ideaWindow.Show();
-            //HaphazardIdeaButton.Visibility = Visibility.Hidden;
-            //ToDoListButton.Visibility = Visibility.Hidden;
             this.Hide();
         }
 
@@ -54,8 +51,6 @@ namespace NoteApplicationGUI
             ToDoListWindow listWindow = new ToDoListWindow(_user, null);
             listWindow.userClosedWindow += SeeThisWindowAgain;
             listWindow.Show();
-            //HaphazardIdeaButton.Visibility = Visibility.Hidden;
-            //ToDoListButton.Visibility = Visibility.Hidden;
             this.Hide();
         }
 
@@ -81,17 +76,6 @@ namespace NoteApplicationGUI
             }
         }
 
-        //public void ShowButtonsToAddNote()
-        //{
-        //    HaphazardIdeaButton.Visibility = Visibility.Visible;
-        //    ToDoListButton.Visibility = Visibility.Visible;
-        //}
-
-        //public void ShowButtonToViewNote(Note note)
-        //{
-        //    ViewNote.Visibility = Visibility.Visible;
-        //    noteToView = note;
-        //}
 
         private void SeeThisWindowAgain(Window window)
         {
@@ -105,8 +89,6 @@ namespace NoteApplicationGUI
         {
             IdeasButton.Background = Brushes.LightSeaGreen;
             ListsButton.Background = Brushes.SeaShell;
-            //HaphazardIdeaButton.Visibility = Visibility.Hidden;
-            //ToDoListButton.Visibility = Visibility.Hidden;
             ViewIdeasPage page = new ViewIdeasPage(this, _ideaNotes, _user);
             ViewContent.Content = page;
         }
@@ -115,17 +97,8 @@ namespace NoteApplicationGUI
         {
             ListsButton.Background = Brushes.LightSeaGreen;
             IdeasButton.Background = Brushes.SeaShell;
-            //HaphazardIdeaButton.Visibility = Visibility.Hidden;
-            //ToDoListButton.Visibility = Visibility.Hidden;
             ViewListsPage page = new ViewListsPage(this, _listNotes, _user);
             ViewContent.Content = page;
         }
-
-        //private void ViewNote_Click(object sender, RoutedEventArgs e)
-        //{
-            
-        //}
-
-
     }
 }
